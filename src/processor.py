@@ -26,6 +26,9 @@ def clean_project_tag(tag):
         if len(parts) >= 3:
             clean_tag = '_'.join(parts[:2])
         
+        # Удаляем пробелы в начале и конце
+        clean_tag = clean_tag.strip()
+        
         return clean_tag
     except Exception as e:
         logger.error(f"Ошибка при очистке тега '{tag}': {e}")

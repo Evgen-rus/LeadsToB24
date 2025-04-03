@@ -47,3 +47,11 @@ ENV/
 # Sensitive data
 credentials/
 database/ 
+
+check_db.py
+check_db.pyc
+check_db.pyo
+check_db.pyd
+check_db.pyw
+check_db.pyz
+check_db.pyc
