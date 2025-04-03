@@ -7,10 +7,10 @@ import time
 import sys
 from datetime import datetime
 
-from src.setup import logger, init_db
+from src.setup import logger
 from src.sheets import get_new_rows, mark_row_as_processed
 from src.processor import process_row
-from src.db import insert_lead
+from src.db import insert_lead, init_db
 from src.router import route_lead
 from src.client_config import load_clients
 from src.scheduler import run_scheduler
