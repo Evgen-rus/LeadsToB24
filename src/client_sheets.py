@@ -9,6 +9,7 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
 from src.setup import CREDENTIALS_PATH, SCOPES, logger
+from src.db import get_connection
 
 def send_to_client_sheet(client_config, lead_data):
     """
@@ -25,11 +26,36 @@ def send_to_client_sheet(client_config, lead_data):
         # Проверяем наличие необходимых настроек клиента
         if not client_config.get('spreadsheet_id') or not client_config.get('sheet_name'):
             logger.warning(f"Для клиента {client_config.get('name')} не настроена Google таблица.")
+            
+            # Обновляем статус доставки
+            conn = get_connection()
+            if conn:
+                cursor = conn.cursor()
+                cursor.execute('''
+                UPDATE leads
+                SET sheet_delivery_status = ?, delivery_attempts = delivery_attempts + 1
+                WHERE id = ?
+                ''', ('error: no sheet configured', lead_data.get('id')))
+                conn.commit()
+                conn.close()
+            
             return False
         
         # Получаем сервис для работы с Google Sheets
         service = get_sheets_service()
         if not service:
+            # Обновляем статус доставки
+            conn = get_connection()
+            if conn:
+                cursor = conn.cursor()
+                cursor.execute('''
+                UPDATE leads
+                SET sheet_delivery_status = ?, delivery_attempts = delivery_attempts + 1
+                WHERE id = ?
+                ''', ('error: failed to get sheets service', lead_data.get('id')))
+                conn.commit()
+                conn.close()
+            
             return False
         
         # Подготавливаем данные для добавления в таблицу
@@ -70,14 +96,54 @@ def send_to_client_sheet(client_config, lead_data):
             body=body
         ).execute()
         
+        # Обновляем статус доставки в БД
+        conn = get_connection()
+        if conn:
+            cursor = conn.cursor()
+            cursor.execute('''
+            UPDATE leads
+            SET sheet_delivery_status = ?, sheet_delivery_time = CURRENT_TIMESTAMP
+            WHERE id = ?
+            ''', ('delivered', lead_data.get('id')))
+            conn.commit()
+            conn.close()
+        
         logger.info(f"Данные лида {lead_data.get('id')} успешно отправлены в таблицу клиента {client_config.get('name')}.")
         return True
     
     except HttpError as error:
-        logger.error(f"Ошибка Google API при отправке данных в таблицу клиента: {error}")
+        error_message = f"Ошибка Google API при отправке данных в таблицу клиента: {error}"
+        logger.error(error_message)
+        
+        # Обновляем статус доставки
+        conn = get_connection()
+        if conn:
+            cursor = conn.cursor()
+            cursor.execute('''
+            UPDATE leads
+            SET sheet_delivery_status = ?, delivery_attempts = delivery_attempts + 1
+            WHERE id = ?
+            ''', (f'error: API error - {str(error)[:100]}', lead_data.get('id')))
+            conn.commit()
+            conn.close()
+        
         return False
     except Exception as e:
-        logger.error(f"Неожиданная ошибка при отправке данных в таблицу клиента: {e}")
+        error_message = f"Неожиданная ошибка при отправке данных в таблицу клиента: {e}"
+        logger.error(error_message)
+        
+        # Обновляем статус доставки
+        conn = get_connection()
+        if conn:
+            cursor = conn.cursor()
+            cursor.execute('''
+            UPDATE leads
+            SET sheet_delivery_status = ?, delivery_attempts = delivery_attempts + 1
+            WHERE id = ?
+            ''', (f'error: {str(e)[:100]}', lead_data.get('id')))
+            conn.commit()
+            conn.close()
+        
         return False
 
 def get_sheets_service():

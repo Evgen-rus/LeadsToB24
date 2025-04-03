@@ -26,8 +26,11 @@ def clean_project_tag(tag):
         if len(parts) >= 3:
             clean_tag = '_'.join(parts[:2])
         
-        # Удаляем пробелы в начале и конце
+        # Удаляем пробелы в начале и конце строки и убеждаемся, что тег не содержит лишних пробелов
         clean_tag = clean_tag.strip()
+        
+        # Логируем преобразование тега для отладки
+        logger.debug(f"Исходный тег: '{tag}', очищенный тег: '{clean_tag}'")
         
         return clean_tag
     except Exception as e:
@@ -120,4 +123,123 @@ def process_row(row):
     
     except Exception as e:
         logger.error(f"Ошибка при обработке строки {row}: {e}")
-        return None 
+        return None
+
+def check_for_new_rows(service, sheet_id, sheet_name, force_process=False):
+    """
+    Проверяет наличие новых строк в таблице.
+    
+    Args:
+        service: Сервис Google Sheets API
+        sheet_id (str): ID таблицы Google Sheets
+        sheet_name (str): Название листа
+        force_process (bool): Игнорировать статус обработки
+    
+    Returns:
+        list: Список необработанных строк или пустой список
+    """
+    try:
+        # Формируем запрос для получения всего листа
+        sheet_range = f"{sheet_name}!A2:I"
+        result = service.spreadsheets().values().get(
+            spreadsheetId=sheet_id,
+            range=sheet_range
+        ).execute()
+        
+        rows = result.get('values', [])
+        if not rows:
+            logger.info("В таблице не найдено данных.")
+            return []
+        
+        # Фильтруем строки, у которых нет отметки в колонке "Already sent"
+        new_rows = []
+        for row in rows:
+            # Проверяем, что строка имеет достаточную длину
+            if len(row) <= COLUMN_INDICES['already_sent']:
+                # Добавляем пустые элементы, если строка короче ожидаемой
+                row.extend([''] * (COLUMN_INDICES['already_sent'] + 1 - len(row)))
+                
+            # Проверяем наличие отметки в колонке "Already sent"
+            if force_process or row[COLUMN_INDICES['already_sent']] != '✅':
+                new_rows.append(row)
+        
+        logger.info(f"Найдено {len(new_rows)} необработанных строк.")
+        return new_rows
+    
+    except Exception as e:
+        logger.error(f"Ошибка при проверке новых строк: {e}")
+        return []
+
+def process_sheet_data(service, rows):
+    """
+    Обрабатывает данные из Google Sheet и маршрутизирует лиды.
+    
+    Args:
+        service: Сервис Google Sheets API
+        rows (list): Список строк с данными
+    
+    Returns:
+        int: Количество успешно обработанных строк
+    """
+    from src.db import insert_lead, lead_exists
+    from src.router import route_lead
+    from src.setup import SOURCE_SPREADSHEET_ID as SHEET_ID, SOURCE_SHEET_NAME as SHEET_NAME
+    
+    success_count = 0
+    
+    for i, row in enumerate(rows):
+        try:
+            # Обрабатываем данные строки
+            processed_data = process_row(row)
+            if not processed_data:
+                logger.warning(f"Не удалось обработать строку {i+1}.")
+                continue
+            
+            # Проверяем, существует ли запись в БД
+            if lead_exists(processed_data['id']):
+                logger.warning(f"Запись {processed_data['id']} уже существует в БД.")
+                
+                # Помечаем строку как обработанную
+                update_range = f"{SHEET_NAME}!I{i + 2}"
+                body = {
+                    'values': [['✅']]
+                }
+                service.spreadsheets().values().update(
+                    spreadsheetId=SHEET_ID,
+                    range=update_range,
+                    valueInputOption='RAW',
+                    body=body
+                ).execute()
+                
+                continue
+            
+            # Добавляем запись в БД
+            if not insert_lead(processed_data):
+                logger.warning(f"Не удалось добавить запись в БД: {processed_data['id']}.")
+                continue
+            
+            # Маршрутизируем запись соответствующему клиенту
+            if not route_lead(processed_data):
+                logger.warning(f"Не удалось маршрутизировать запись: {processed_data['id']}.")
+                continue
+            
+            # Помечаем строку как обработанную
+            update_range = f"{SHEET_NAME}!I{i + 2}"
+            body = {
+                'values': [['✅']]
+            }
+            service.spreadsheets().values().update(
+                spreadsheetId=SHEET_ID,
+                range=update_range,
+                valueInputOption='RAW',
+                body=body
+            ).execute()
+            
+            logger.info(f"Запись {processed_data['id']} успешно обработана.")
+            success_count += 1
+            
+        except Exception as e:
+            logger.error(f"Ошибка при обработке строки {i+1}: {e}")
+            continue
+    
+    return success_count 

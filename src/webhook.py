@@ -8,6 +8,7 @@ import requests
 from datetime import datetime
 
 from src.setup import logger
+from src.db import get_connection
 
 def send_to_webhook(client_config, lead_data):
     """
@@ -24,6 +25,19 @@ def send_to_webhook(client_config, lead_data):
         # Проверяем наличие настроек вебхука
         if not client_config.get('use_crm') or not client_config.get('webhook_url'):
             logger.warning(f"Для клиента {client_config.get('name')} не настроена интеграция с CRM.")
+            
+            # Обновляем статус доставки
+            conn = get_connection()
+            if conn:
+                cursor = conn.cursor()
+                cursor.execute('''
+                UPDATE leads
+                SET crm_delivery_status = ?, delivery_attempts = delivery_attempts + 1
+                WHERE id = ?
+                ''', ('error: no CRM configured', lead_data.get('id')))
+                conn.commit()
+                conn.close()
+                
             return False
         
         # Формируем данные для отправки
@@ -51,19 +65,88 @@ def send_to_webhook(client_config, lead_data):
         # Проверяем ответ
         if response.status_code >= 200 and response.status_code < 300:
             logger.info(f"Данные лида {lead_data.get('id')} успешно отправлены в CRM клиента {client_config.get('name')}.")
+            
+            # Обновляем статус доставки
+            conn = get_connection()
+            if conn:
+                cursor = conn.cursor()
+                cursor.execute('''
+                UPDATE leads
+                SET crm_delivery_status = ?, crm_delivery_time = CURRENT_TIMESTAMP
+                WHERE id = ?
+                ''', ('delivered', lead_data.get('id')))
+                conn.commit()
+                conn.close()
+                
             return True
         else:
-            logger.error(f"Ошибка при отправке данных в CRM. Код ответа: {response.status_code}, ответ: {response.text}")
+            error_message = f"Ошибка при отправке данных в CRM. Код ответа: {response.status_code}, ответ: {response.text}"
+            logger.error(error_message)
+            
+            # Обновляем статус доставки
+            conn = get_connection()
+            if conn:
+                cursor = conn.cursor()
+                cursor.execute('''
+                UPDATE leads
+                SET crm_delivery_status = ?, delivery_attempts = delivery_attempts + 1
+                WHERE id = ?
+                ''', (f'error: HTTP {response.status_code} - {response.text[:100]}', lead_data.get('id')))
+                conn.commit()
+                conn.close()
+                
             return False
     
     except requests.RequestException as e:
-        logger.error(f"Ошибка сети при отправке данных в CRM: {e}")
+        error_message = f"Ошибка сети при отправке данных в CRM: {e}"
+        logger.error(error_message)
+        
+        # Обновляем статус доставки
+        conn = get_connection()
+        if conn:
+            cursor = conn.cursor()
+            cursor.execute('''
+            UPDATE leads
+            SET crm_delivery_status = ?, delivery_attempts = delivery_attempts + 1
+            WHERE id = ?
+            ''', (f'error: Network - {str(e)[:100]}', lead_data.get('id')))
+            conn.commit()
+            conn.close()
+            
         return False
     except json.JSONDecodeError as e:
-        logger.error(f"Ошибка формирования JSON для вебхука: {e}")
+        error_message = f"Ошибка формирования JSON для вебхука: {e}"
+        logger.error(error_message)
+        
+        # Обновляем статус доставки
+        conn = get_connection()
+        if conn:
+            cursor = conn.cursor()
+            cursor.execute('''
+            UPDATE leads
+            SET crm_delivery_status = ?, delivery_attempts = delivery_attempts + 1
+            WHERE id = ?
+            ''', (f'error: JSON - {str(e)[:100]}', lead_data.get('id')))
+            conn.commit()
+            conn.close()
+            
         return False
     except Exception as e:
-        logger.error(f"Неожиданная ошибка при отправке данных через вебхук: {e}")
+        error_message = f"Неожиданная ошибка при отправке данных через вебхук: {e}"
+        logger.error(error_message)
+        
+        # Обновляем статус доставки
+        conn = get_connection()
+        if conn:
+            cursor = conn.cursor()
+            cursor.execute('''
+            UPDATE leads
+            SET crm_delivery_status = ?, delivery_attempts = delivery_attempts + 1
+            WHERE id = ?
+            ''', (f'error: {str(e)[:100]}', lead_data.get('id')))
+            conn.commit()
+            conn.close()
+            
         return False
 
 def test_webhook(webhook_url):

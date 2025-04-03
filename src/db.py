@@ -33,7 +33,12 @@ def init_db():
             original_tag TEXT,
             processed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
             is_sent_to_client BOOLEAN DEFAULT 0,
-            client_id TEXT
+            client_id TEXT,
+            sheet_delivery_status TEXT DEFAULT NULL,
+            sheet_delivery_time TIMESTAMP DEFAULT NULL,
+            crm_delivery_status TEXT DEFAULT NULL,
+            crm_delivery_time TIMESTAMP DEFAULT NULL,
+            delivery_attempts INTEGER DEFAULT 0
         )
         ''')
         
@@ -127,6 +132,34 @@ def insert_lead(lead_data):
     
     except Exception as e:
         logger.error(f"Ошибка при добавлении записи в базу данных: {e}")
+        if 'conn' in locals() and conn:
+            conn.close()
+        return False
+
+def lead_exists(lead_id):
+    """
+    Проверяет, существует ли запись с указанным ID в базе данных.
+    
+    Args:
+        lead_id (str): ID лида для проверки
+    
+    Returns:
+        bool: True, если запись существует, иначе False
+    """
+    try:
+        conn = get_connection()
+        if not conn:
+            return False
+        
+        cursor = conn.cursor()
+        cursor.execute('SELECT id FROM leads WHERE id = ?', (lead_id,))
+        result = cursor.fetchone() is not None
+        
+        conn.close()
+        return result
+    
+    except Exception as e:
+        logger.error(f"Ошибка при проверке существования записи {lead_id}: {e}")
         if 'conn' in locals() and conn:
             conn.close()
         return False

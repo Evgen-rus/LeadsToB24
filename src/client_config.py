@@ -207,4 +207,101 @@ def update_client(client_id, **kwargs):
         logger.error(f"Ошибка при обновлении клиента {client_id}: {e}")
         if 'conn' in locals() and conn:
             conn.close()
-        return False 
+        return False
+
+def get_all_clients():
+    """
+    Возвращает список всех клиентов.
+    
+    Returns:
+        list: Список словарей с данными о клиентах
+    """
+    try:
+        conn = get_connection()
+        if not conn:
+            return []
+        
+        cursor = conn.cursor()
+        cursor.execute('SELECT * FROM clients')
+        clients = cursor.fetchall()
+        
+        conn.close()
+        
+        return [dict(client) for client in clients]
+    
+    except Exception as e:
+        logger.error(f"Ошибка при получении списка клиентов: {e}")
+        if 'conn' in locals() and conn:
+            conn.close()
+        return []
+
+def add_client_to_config(client_config):
+    """
+    Добавляет нового клиента в конфигурацию.
+    
+    Args:
+        client_config (dict): Словарь с настройками клиента
+    
+    Returns:
+        bool: True, если клиент успешно добавлен, иначе False
+    """
+    try:
+        name = client_config.get('name')
+        tag = client_config.get('tag')
+        
+        if not name or not tag:
+            logger.error("Не указаны обязательные параметры name и tag")
+            return False
+        
+        spreadsheet_id = client_config.get('sheet_id')
+        sheet_name = client_config.get('sheet_name')
+        use_crm = client_config.get('use_crm', False)
+        webhook_url = client_config.get('webhook_url')
+        
+        client_id = add_client(
+            name=name,
+            tag=tag,
+            spreadsheet_id=spreadsheet_id,
+            sheet_name=sheet_name,
+            use_crm=use_crm,
+            webhook_url=webhook_url
+        )
+        
+        return client_id is not None
+    
+    except Exception as e:
+        logger.error(f"Ошибка при добавлении клиента в конфигурацию: {e}")
+        return False
+
+def get_client_by_name(name):
+    """
+    Находит клиента по имени.
+    
+    Args:
+        name (str): Имя клиента
+    
+    Returns:
+        dict: Данные о клиенте или None, если клиент не найден
+    """
+    try:
+        conn = get_connection()
+        if not conn:
+            return None
+        
+        cursor = conn.cursor()
+        cursor.execute('SELECT * FROM clients WHERE name = ?', (name,))
+        client = cursor.fetchone()
+        
+        conn.close()
+        
+        if client:
+            return dict(client)
+        else:
+            logger.warning(f"Клиент с именем '{name}' не найден.")
+            return None
+    
+    except Exception as e:
+        logger.error(f"Ошибка при поиске клиента по имени '{name}': {e}")
+        if 'conn' in locals() and conn:
+            conn.close()
+        return None 
