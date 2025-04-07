@@ -82,17 +82,13 @@ def get_client_by_tag_cached(tag):
     
     return None
 
-def add_client(name, tag, spreadsheet_id=None, sheet_name=None, use_crm=False, webhook_url=None):
+def add_client(name, tag):
     """
     Добавляет нового клиента в БД.
     
     Args:
         name (str): Имя клиента
         tag (str): Тег для маршрутизации
-        spreadsheet_id (str, optional): ID Google таблицы клиента
-        sheet_name (str, optional): Имя листа в таблице клиента
-        use_crm (bool, optional): Флаг использования CRM
-        webhook_url (str, optional): URL вебхука для CRM
     
     Returns:
         str: ID добавленного клиента или None в случае ошибки
@@ -118,16 +114,12 @@ def add_client(name, tag, spreadsheet_id=None, sheet_name=None, use_crm=False, w
         
         # Добавляем нового клиента
         cursor.execute('''
-        INSERT INTO clients (id, name, tag, spreadsheet_id, sheet_name, use_crm, webhook_url)
-        VALUES (?, ?, ?, ?, ?, ?, ?)
+        INSERT INTO clients (id, name, tag)
+        VALUES (?, ?, ?)
         ''', (
             client_id,
             name,
-            tag,
-            spreadsheet_id,
-            sheet_name,
-            1 if use_crm else 0,
-            webhook_url
+            tag
         ))
         
         conn.commit()
@@ -175,12 +167,9 @@ def update_client(client_id, **kwargs):
         params = []
         
         for key, value in kwargs.items():
-            if key in ['name', 'tag', 'spreadsheet_id', 'sheet_name', 'use_crm', 'webhook_url']:
+            if key in ['name', 'tag']:
                 set_clauses.append(f"{key} = ?")
-                if key == 'use_crm':
-                    params.append(1 if value else 0)
-                else:
-                    params.append(value)
+                params.append(value)
         
         if not set_clauses:
             logger.warning("Нет параметров для обновления.")

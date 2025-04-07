@@ -28,17 +28,13 @@ def setup_database():
         logger.error(f"Ошибка при настройке базы данных: {e}")
         return False
 
-def add_test_client(name, tag, spreadsheet_id=None, sheet_name=None, use_crm=False, webhook_url=None):
+def add_test_client(name, tag):
     """
     Добавляет тестового клиента в базу данных.
     
     Args:
         name (str): Имя клиента
         tag (str): Тег для маршрутизации
-        spreadsheet_id (str, optional): ID Google таблицы клиента
-        sheet_name (str, optional): Имя листа в таблице клиента
-        use_crm (bool, optional): Флаг использования CRM
-        webhook_url (str, optional): URL вебхука для CRM
     
     Returns:
         str: ID добавленного клиента или None в случае ошибки
@@ -61,16 +57,12 @@ def add_test_client(name, tag, spreadsheet_id=None, sheet_name=None, use_crm=Fal
         
         # Добавляем тестового клиента
         cursor.execute('''
-        INSERT INTO clients (id, name, tag, spreadsheet_id, sheet_name, use_crm, webhook_url)
-        VALUES (?, ?, ?, ?, ?, ?, ?)
+        INSERT INTO clients (id, name, tag)
+        VALUES (?, ?, ?)
         ''', (
             f"test_{name.lower().replace(' ', '_')}",
             name,
-            tag,
-            spreadsheet_id,
-            sheet_name,
-            1 if use_crm else 0,
-            webhook_url
+            tag
         ))
         
         conn.commit()
@@ -95,19 +87,8 @@ def add_test_data():
     try:
         # Добавляем тестовых клиентов
         add_test_client(
-            name="Неометрия Ростов",
-            tag="[П8] Неометрия Ростов",
-            spreadsheet_id="your_spreadsheet_id_here",
-            sheet_name="Лиды"
-        )
-        
-        add_test_client(
-            name="МОЛОТОВ-1 проектирование",
-            tag="[П179] МОЛОТОВ-1 проектирование",
-            spreadsheet_id="your_spreadsheet_id_here",
-            sheet_name="Лиды",
-            use_crm=True,
-            webhook_url="https://example.com/webhook"
+            name="СуперМет_СП",
+            tag="[LR115] СуперМет_СП"
         )
         
         logger.info("Тестовые данные успешно добавлены.")

@@ -32,18 +32,18 @@ def send_to_bitrix24(lead_data, config=None):
         # Формируем данные для создания лида
         lead_payload = {
             'fields': {
-                'TITLE': f"LR_конк_{phone}",  # Название лида в формате LR_конк_ТЕЛЕФОН
-                'NAME': phone,  # Имя контакта (номер телефона)
-                'PHONE': [{'VALUE': phone, 'VALUE_TYPE': 'WORK'}] if phone else [],
+                'TITLE': f"LR_конк_{phone}",  # Название лида в нужном формате
+                'PHONE': [{'VALUE': phone, 'VALUE_TYPE': 'WORK'}] if phone else [],  # Телефон
                 'SOURCE_ID': 'UC_YDLU6W',  # ID источника "САНКТ-ПЕТЕРБУРГ. LeadRecord. Сэндвич-Панели"
                 'ASSIGNED_BY_ID': 1,  # ID Вероники Родителевой
                 'STATUS_ID': 'NEW',  # Статус "Новый"
                 'COMMENTS': f"Создано автоматически от LeadsToB24. ID: {lead_data.get('id')}, Тег: {lead_data.get('tag')}",
-                'UF_CRM_1711538238': phone  # Пользовательское поле "Клиент"
+                'NAME': phone  # Используем телефон как имя
             }
         }
         
         logger.info(f"Отправка запроса на создание лида {lead_data.get('id')} в Битрикс24")
+        logger.info(f"Данные лида: {lead_payload}")
         
         # Отправляем запрос в Битрикс24
         response = requests.post(
@@ -52,6 +52,9 @@ def send_to_bitrix24(lead_data, config=None):
             headers={'Content-Type': 'application/json'},
             timeout=10
         )
+        
+        # Логируем ответ от сервера для отладки
+        logger.info(f"Ответ сервера: {response.status_code} - {response.text}")
         
         if response.status_code >= 200 and response.status_code < 300:
             result = response.json()
