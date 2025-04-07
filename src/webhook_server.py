@@ -16,7 +16,7 @@ from pathlib import Path
 # Настраиваем путь для импорта модулей из корневой директории проекта
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from src.setup import logger, LOG_DIR
+from src.setup import logger, LOGS_DIR
 from src.db import init_db, insert_lead
 from src.processor import clean_project_tag, validate_phone, parse_datetime
 from src.router import route_lead
@@ -25,7 +25,7 @@ from src.router import route_lead
 app = Flask(__name__)
 
 # Настраиваем логгирование Flask
-flask_log_path = Path(LOG_DIR) / 'webhook_server.log'
+flask_log_path = Path(LOGS_DIR) / 'webhook_server.log'
 flask_handler = logging.FileHandler(flask_log_path)
 flask_handler.setLevel(logging.INFO)
 flask_handler.setFormatter(logging.Formatter(
@@ -111,7 +111,7 @@ def receive_lead():
     """
     Эндпоинт для приема данных о лидах.
     
-    Принимает данные в формате JSON, обрабатывает их и добавляет в БД.
+    Принимает данные в формате JSON, обрабатывает и добавляет в БД.
     """
     try:
         # Проверяем, что получен JSON
