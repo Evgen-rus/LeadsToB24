@@ -91,6 +91,11 @@ def add_test_data():
             tag="[LR115] СуперМет_СП"
         )
         
+        add_test_client(
+            name="Диалог Чанган Казань",
+            tag="[ДМД13] Диалог Чанган Казань"
+        )
+        
         logger.info("Тестовые данные успешно добавлены.")
         return True
     

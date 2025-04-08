@@ -38,7 +38,8 @@ def send_to_bitrix24(lead_data, config=None):
                 'ASSIGNED_BY_ID': 1,  # ID Вероники Родителевой
                 'STATUS_ID': 'NEW',  # Статус "Новый"
                 'COMMENTS': f"Создано автоматически от LeadsToB24. ID: {lead_data.get('id')}, Тег: {lead_data.get('tag')}",
-                'NAME': phone  # Используем телефон как имя
+                'NAME': phone,  # Используем телефон как имя
+                'COMPANY_TITLE': phone  # Название компании (поле Клиент) должно быть телефоном
             }
         }
         
