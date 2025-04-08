@@ -8,6 +8,49 @@ from datetime import datetime
 from src.setup import logger
 from src.db import get_connection
 
+def create_contact(phone, webhook_base_url):
+    """
+    Создает контакт в Битрикс24.
+    
+    Args:
+        phone (str): Номер телефона
+        webhook_base_url (str): Базовый URL вебхука
+    
+    Returns:
+        int: ID созданного контакта или None в случае ошибки
+    """
+    try:
+        # Формируем данные для создания контакта
+        contact_payload = {
+            'fields': {
+                'NAME': phone,  # Используем телефон как имя
+                'PHONE': [{'VALUE': phone, 'VALUE_TYPE': 'WORK'}],  # Телефон
+                'OPENED': 'Y'  # Доступен для всех
+            }
+        }
+        
+        # Отправляем запрос на создание контакта
+        response = requests.post(
+            f"{webhook_base_url}/crm.contact.add.json",
+            json=contact_payload,
+            headers={'Content-Type': 'application/json'},
+            timeout=10
+        )
+        
+        if response.status_code >= 200 and response.status_code < 300:
+            result = response.json()
+            contact_id = result.get('result')
+            if contact_id:
+                logger.info(f"Контакт успешно создан, ID: {contact_id}")
+                return contact_id
+        
+        logger.error(f"Ошибка при создании контакта: {response.status_code} - {response.text}")
+        return None
+        
+    except Exception as e:
+        logger.error(f"Ошибка при создании контакта: {e}")
+        return None
+
 def send_to_bitrix24(lead_data, config=None):
     """
     Отправляет данные лида в Битрикс24 через REST API.
@@ -28,18 +71,26 @@ def send_to_bitrix24(lead_data, config=None):
         
         # Получаем телефон из данных
         phone = lead_data.get('phone', '')
+        istochnic = "САНКТ-ПЕТЕРБУРГ. LeadRecord. Сэндвич-Панели"
+        
+        # Создаем контакт
+        webhook_base_url = config['webhook_url'].split('/crm.')[0]
+        contact_id = create_contact(phone, webhook_base_url)
         
         # Формируем данные для создания лида
         lead_payload = {
             'fields': {
                 'TITLE': f"LR_конк_{phone}",  # Название лида в нужном формате
                 'PHONE': [{'VALUE': phone, 'VALUE_TYPE': 'WORK'}] if phone else [],  # Телефон
-                'SOURCE_ID': 'UC_YDLU6W',  # ID источника "САНКТ-ПЕТЕРБУРГ. LeadRecord. Сэндвич-Панели"
+                'SOURCE_ID': istochnic,  # Источник
                 'ASSIGNED_BY_ID': 1,  # ID Вероники Родителевой
                 'STATUS_ID': 'NEW',  # Статус "Новый"
-                'COMMENTS': f"Создано автоматически от LeadsToB24. ID: {lead_data.get('id')}, Тег: {lead_data.get('tag')}",
+                'COMMENTS': "",  # Комментарий
                 'NAME': phone,  # Используем телефон как имя
-                'COMPANY_TITLE': phone  # Название компании (поле Клиент) должно быть телефоном
+                'COMPANY_TITLE': phone,  # Название компании
+                'OPENED': 'Y',  # Доступен для всех
+                'SOURCE_DESCRIPTION': istochnic,  # Описание источника
+                'CONTACT_ID': contact_id if contact_id else None  # ID созданного контакта
             }
         }
         

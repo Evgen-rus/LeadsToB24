@@ -17,9 +17,10 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from src.setup import logger, LOGS_DIR
-from src.db import init_db, insert_lead
-from src.processor import clean_project_tag, validate_phone, parse_datetime
+from src.db import init_db
+from src.processor import process_row
 from src.router import route_lead
+from src.raw_data_handler import save_raw_data
 
 # Создаем приложение Flask
 app = Flask(__name__)
@@ -34,77 +35,33 @@ flask_handler.setFormatter(logging.Formatter(
 app.logger.addHandler(flask_handler)
 app.logger.setLevel(logging.INFO)
 
-def process_incoming_data(data):
+@app.route('/api/external', methods=['POST'])
+def receive_external_lead():
     """
-    Обрабатывает входящие данные от поставщика.
-    
-    Args:
-        data (dict): Данные, полученные от поставщика
-    
-    Returns:
-        dict: Результат обработки, содержащий статус и дополнительные данные
+    Эндпоинт для приема данных от внешнего API.
     """
     try:
-        # Проверяем наличие необходимых полей
-        required_fields = ['created_at', 'id', 'phone', 'project_tag']
-        missing_fields = [field for field in required_fields if field not in data]
+        # Получаем данные
+        data = request.get_json()
         
-        if missing_fields:
-            return {
-                'success': False,
-                'message': f'Отсутствуют обязательные поля: {", ".join(missing_fields)}'
-            }
+        # Сначала сохраняем сырые данные
+        success, message = save_raw_data(data)
+        if not success:
+            app.logger.error(f"Ошибка при сохранении сырых данных: {message}")
         
-        # Валидируем и обрабатываем данные
-        created_at = parse_datetime(data['created_at'])
-        if not created_at:
-            return {
-                'success': False,
-                'message': f'Некорректная дата создания: {data["created_at"]}'
-            }
-        
-        cleaned_phone = validate_phone(data['phone'])
-        if not cleaned_phone:
-            return {
-                'success': False,
-                'message': f'Некорректный телефон: {data["phone"]}'
-            }
-        
-        cleaned_tag = clean_project_tag(data['project_tag'])
-        
-        # Формируем данные для сохранения
-        processed_data = {
-            'created_at': created_at,
-            'id': data['id'],
-            'phone': cleaned_phone,
-            'tag': cleaned_tag,
-            'original_tag': data['project_tag']
-        }
-        
-        # Пытаемся добавить запись в БД
-        if not insert_lead(processed_data):
-            # Проверка на ошибку дубликата выполняется внутри insert_lead
-            return {
-                'success': False,
-                'message': f'Не удалось добавить запись в БД (возможно, дубликат)'
-            }
-        
-        # Маршрутизируем запись соответствующему клиенту
-        route_result = route_lead(processed_data)
-        
-        return {
+        # Пока просто возвращаем успешный ответ
+        return jsonify({
             'success': True,
-            'message': 'Данные успешно обработаны',
-            'lead_id': data['id'],
-            'routed': route_result
-        }
-    
+            'message': 'Данные получены и сохранены'
+        }), 201
+        
     except Exception as e:
-        logger.error(f"Ошибка при обработке входящих данных: {e}")
-        return {
+        error_message = f"Ошибка при обработке внешнего запроса: {e}"
+        app.logger.error(error_message)
+        return jsonify({
             'success': False,
-            'message': f'Внутренняя ошибка сервера: {str(e)}'
-        }
+            'message': error_message
+        }), 500
 
 @app.route('/api/lead', methods=['POST'])
 def receive_lead():
@@ -128,14 +85,28 @@ def receive_lead():
         app.logger.info(f"Получены данные: {json.dumps(data, ensure_ascii=False)}")
         
         # Обрабатываем данные
-        result = process_incoming_data(data)
+        processed_data = process_row(data)
         
-        # Возвращаем результат
-        if result['success']:
-            return jsonify(result), 201
+        # Проверяем результат обработки
+        if processed_data is None:
+            return jsonify({
+                'success': False,
+                'message': 'Ошибка при обработке данных'
+            }), 400
+            
+        # Отправляем данные в Bitrix24
+        from src.bitrix24 import send_to_bitrix24
+        if send_to_bitrix24(processed_data):
+            return jsonify({
+                'success': True,
+                'message': 'Лид успешно создан',
+                'data': processed_data
+            }), 201
         else:
-            app.logger.warning(f"Ошибка обработки: {result['message']}")
-            return jsonify(result), 400
+            return jsonify({
+                'success': False,
+                'message': 'Ошибка при отправке в Bitrix24'
+            }), 500
     
     except Exception as e:
         app.logger.error(f"Ошибка при обработке запроса: {e}")
@@ -200,56 +171,35 @@ def simulation_form():
         
         <div class="response">
             <h2>Ответ сервера:</h2>
-            <pre id="response">Здесь будет отображен ответ сервера...</pre>
+            <pre id="response"></pre>
         </div>
-        
+
         <script>
-            document.getElementById('leadForm').addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                var created_at = document.getElementById('created_at').value || getCurrentDateTime();
-                document.getElementById('created_at').value = created_at;
-                
-                var formData = {
-                    created_at: created_at,
-                    id: document.getElementById('id').value || generateRandomId(),
-                    phone: document.getElementById('phone').value || generateRandomPhone(),
-                    project_tag: document.getElementById('project_tag').value
-                };
-                
-                fetch('/api/lead', {
+        document.getElementById('leadForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = {
+                created_at: document.getElementById('created_at').value,
+                id: document.getElementById('id').value,
+                phone: document.getElementById('phone').value,
+                project_tag: document.getElementById('project_tag').value
+            };
+            
+            try {
+                const response = await fetch('/api/lead', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify(formData),
-                })
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('response').textContent = JSON.stringify(data, null, 2);
-                })
-                .catch((error) => {
-                    document.getElementById('response').textContent = 'Ошибка: ' + error;
                 });
-            });
-            
-            function getCurrentDateTime() {
-                var now = new Date();
-                return now.getFullYear() + '-' + 
-                       String(now.getMonth() + 1).padStart(2, '0') + '-' + 
-                       String(now.getDate()).padStart(2, '0') + ' ' + 
-                       String(now.getHours()).padStart(2, '0') + ':' + 
-                       String(now.getMinutes()).padStart(2, '0') + ':' + 
-                       String(now.getSeconds()).padStart(2, '0');
+                
+                const result = await response.json();
+                document.getElementById('response').textContent = JSON.stringify(result, null, 2);
+            } catch (error) {
+                document.getElementById('response').textContent = 'Ошибка: ' + error.message;
             }
-            
-            function generateRandomId() {
-                return Math.floor(Math.random() * 9000000000) + 1000000000;
-            }
-            
-            function generateRandomPhone() {
-                return '7' + (Math.floor(Math.random() * 900000000) + 100000000);
-            }
+        });
         </script>
     </body>
     </html>

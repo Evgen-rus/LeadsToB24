@@ -47,6 +47,23 @@ def init_db():
         )
         ''')
         
+        # Создаем таблицу для сырых данных webhook
+        cursor.execute('''
+        CREATE TABLE IF NOT EXISTS raw_webhooks (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            json_file TEXT,
+            vid TEXT,
+            phones TEXT,
+            source_timestamp TEXT,
+            page TEXT,
+            raw_json TEXT,
+            processed INTEGER DEFAULT 0,
+            processed_at TIMESTAMP,
+            processing_result TEXT
+        )
+        ''')
+        
         conn.commit()
         conn.close()
         
