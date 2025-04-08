@@ -81,13 +81,8 @@ def send_to_bitrix24(lead_data, config=None):
         lead_payload = {
             'fields': {
                 'TITLE': f"LR_конк_{phone}",  # Название лида в нужном формате
-                'PHONE': [{'VALUE': phone, 'VALUE_TYPE': 'WORK'}] if phone else [],  # Телефон
-                'SOURCE_ID': istochnic,  # Источник
                 'ASSIGNED_BY_ID': 1,  # ID Вероники Родителевой
                 'STATUS_ID': 'NEW',  # Статус "Новый"
-                'COMMENTS': "",  # Комментарий
-                'NAME': phone,  # Используем телефон как имя
-                'COMPANY_TITLE': phone,  # Название компании
                 'OPENED': 'Y',  # Доступен для всех
                 'SOURCE_DESCRIPTION': istochnic,  # Описание источника
                 'CONTACT_ID': contact_id if contact_id else None  # ID созданного контакта
