@@ -104,8 +104,8 @@ class Bitrix24API:
 def main():
     """Основная функция для тестирования API"""
     # Webhook URL
-    #webhook_url = "https://b24-2l18k6.bitrix24.ru/rest/1/g2io5xchou3u0t17/" #б24 для теста
-    webhook_url = "https://supermet.bitrix24.ru/rest/3900/bq745g4ngowz4z43/" #битрикс супермет
+    #webhook_url = "https://b24-2l18k6.bitrix24.ru/rest/1/g2io5xchou3u0t17/"  # б24 для теста
+    webhook_url = "https://supermet.bitrix24.ru/rest/3900/bq745g4ngowz4z43/"  # битрикс супермет
     
     try:
         # Создаем экземпляр API клиента

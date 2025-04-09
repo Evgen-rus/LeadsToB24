@@ -78,15 +78,17 @@ def send_to_bitrix24(lead_data, config=None):
         # Формируем данные для создания лида
         lead_payload = {
             'fields': {
-                'TITLE': f"LR_конк_{phone}",  # Название лида в нужном формате
-                'ASSIGNED_BY_ID': 1,  # ID Вероники Родителевой
-                'STATUS_ID': 'NEW',  # Статус "Новый"
-                'OPENED': 'Y',  # Доступен для всех
-                'SOURCE_DESCRIPTION': istochnic,  # Описание источника
-                'PHONE': [{'VALUE': phone, 'VALUE_TYPE': 'WORK'}],  # Добавляем телефон напрямую в лид
-                'NAME': phone  # Используем телефон как имя клиента
+                'TITLE': f'LR_конк_ {phone}',  # Название лида
+                'PHONE': [{'VALUE': phone, 'VALUE_TYPE': 'WORK'}],  # Телефон
+                'SOURCE_ID': '106',
+                'STATUS_ID': 'UC_LF7L5W',
+                'ASSIGNED_BY_ID': '20140'
             }
         }
+        
+        # Добавляем комментарий, если он есть
+        if 'comments' in lead_data:
+            lead_payload['fields']['COMMENTS'] = lead_data['comments']
         
         logger.info(f"Отправка запроса на создание лида {lead_data.get('id')} в Битрикс24")
         logger.info(f"Данные лида: {lead_payload}")
