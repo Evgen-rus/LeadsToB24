@@ -6,6 +6,7 @@ import sys
 import os
 from typing import Dict, Any
 import pandas as pd
+from tkinter import Tk, filedialog
 
 # Добавляем родительскую директорию в путь для импортов
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -89,12 +90,36 @@ def upload_leads_to_bitrix(leads: list[Dict[str, Any]], config: Dict[str, str]) 
     
     print(f"\nЗагрузка завершена. Успешно: {success}/{total}")
 
+def select_excel_file() -> str:
+    """
+    Открывает диалоговое окно для выбора Excel файла.
+    
+    Returns:
+        str: Путь к выбранному файлу или пустая строка, если файл не выбран
+    """
+    root = Tk()
+    root.withdraw()  # Скрываем основное окно
+    root.attributes('-topmost', True)  # Окно выбора файла будет поверх других окон
+    
+    file_path = filedialog.askopenfilename(
+        title="Выберите Excel файл с лидами",
+        filetypes=[("Excel files", "*.xlsx *.xls")],
+        initialdir=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    )
+    
+    root.destroy()
+    return file_path
+
 def main():
     """
     Основная функция для запуска загрузки лидов.
     """
-    # Excel-файл с лидами
-    file_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "09.04.2025.xlsx")
+    # Открываем диалог выбора файла
+    file_path = select_excel_file()
+    
+    if not file_path:
+        print("Файл не выбран. Загрузка отменена.")
+        return
     
     if not os.path.exists(file_path):
         print(f"Файл не найден: {file_path}")
