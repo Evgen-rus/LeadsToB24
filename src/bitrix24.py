@@ -19,6 +19,7 @@ def create_contact(phone, webhook_base_url):
     Returns:
         int: ID созданного контакта или None в случае ошибки
     """
+    """
     try:
         # Формируем данные для создания контакта
         contact_payload = {
@@ -50,6 +51,7 @@ def create_contact(phone, webhook_base_url):
     except Exception as e:
         logger.error(f"Ошибка при создании контакта: {e}")
         return None
+    """    
 
 def send_to_bitrix24(lead_data, config=None):
     """
@@ -73,10 +75,6 @@ def send_to_bitrix24(lead_data, config=None):
         phone = lead_data.get('phone', '')
         istochnic = "САНКТ-ПЕТЕРБУРГ. LeadRecord. Сэндвич-Панели"
         
-        # Создаем контакт
-        webhook_base_url = config['webhook_url'].split('/crm.')[0]
-        contact_id = create_contact(phone, webhook_base_url)
-        
         # Формируем данные для создания лида
         lead_payload = {
             'fields': {
@@ -85,7 +83,8 @@ def send_to_bitrix24(lead_data, config=None):
                 'STATUS_ID': 'NEW',  # Статус "Новый"
                 'OPENED': 'Y',  # Доступен для всех
                 'SOURCE_DESCRIPTION': istochnic,  # Описание источника
-                'CONTACT_ID': contact_id if contact_id else None  # ID созданного контакта
+                'PHONE': [{'VALUE': phone, 'VALUE_TYPE': 'WORK'}],  # Добавляем телефон напрямую в лид
+                'NAME': phone  # Используем телефон как имя клиента
             }
         }
         
