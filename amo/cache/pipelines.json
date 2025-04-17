@@ -1,0 +1,135 @@
+{
+  "_total_items": 1,
+  "_links": {
+    "self": {
+      "href": "https://jukov9999.amocrm.ru/api/v4/leads/pipelines"
+    }
+  },
+  "_embedded": {
+    "pipelines": [
+      {
+        "id": 9501726,
+        "name": "Воронка",
+        "sort": 1,
+        "is_main": true,
+        "is_unsorted_on": true,
+        "is_archive": false,
+        "account_id": 32363618,
+        "_links": {
+          "self": {
+            "href": "https://jukov9999.amocrm.ru/api/v4/leads/pipelines/9501726"
+          }
+        },
+        "_embedded": {
+          "statuses": [
+            {
+              "id": 75980378,
+              "name": "Неразобранное",
+              "sort": 10,
+              "is_editable": false,
+              "pipeline_id": 9501726,
+              "color": "#c1c1c1",
+              "type": 1,
+              "account_id": 32363618,
+              "_links": {
+                "self": {
+                  "href": "https://jukov9999.amocrm.ru/api/v4/leads/pipelines/9501726/statuses/75980378"
+                }
+              }
+            },
+            {
+              "id": 75980382,
+              "name": "Первичный контакт",
+              "sort": 20,
+              "is_editable": true,
+              "pipeline_id": 9501726,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 32363618,
+              "_links": {
+                "self": {
+                  "href": "https://jukov9999.amocrm.ru/api/v4/leads/pipelines/9501726/statuses/75980382"
+                }
+              }
+            },
+            {
+              "id": 75980386,
+              "name": "Переговоры",
+              "sort": 30,
+              "is_editable": true,
+              "pipeline_id": 9501726,
+              "color": "#ffff99",
+              "type": 0,
+              "account_id": 32363618,
+              "_links": {
+                "self": {
+                  "href": "https://jukov9999.amocrm.ru/api/v4/leads/pipelines/9501726/statuses/75980386"
+                }
+              }
+            },
+            {
+              "id": 75980390,
+              "name": "Принимают решение",
+              "sort": 40,
+              "is_editable": true,
+              "pipeline_id": 9501726,
+              "color": "#ffcc66",
+              "type": 0,
+              "account_id": 32363618,
+              "_links": {
+                "self": {
+                  "href": "https://jukov9999.amocrm.ru/api/v4/leads/pipelines/9501726/statuses/75980390"
+                }
+              }
+            },
+            {
+              "id": 75980394,
+              "name": "Согласование договора",
+              "sort": 50,
+              "is_editable": true,
+              "pipeline_id": 9501726,
+              "color": "#ffcccc",
+              "type": 0,
+              "account_id": 32363618,
+              "_links": {
+                "self": {
+                  "href": "https://jukov9999.amocrm.ru/api/v4/leads/pipelines/9501726/statuses/75980394"
+                }
+              }
+            },
+            {
+              "id": 142,
+              "name": "Успешно реализовано",
+              "sort": 10000,
+              "is_editable": false,
+              "pipeline_id": 9501726,
+              "color": "#CCFF66",
+              "type": 0,
+              "account_id": 32363618,
+              "_links": {
+                "self": {
+                  "href": "https://jukov9999.amocrm.ru/api/v4/leads/pipelines/9501726/statuses/142"
+                }
+              }
+            },
+            {
+              "id": 143,
+              "name": "Закрыто и не реализовано",
+              "sort": 11000,
+              "is_editable": false,
+              "pipeline_id": 9501726,
+              "color": "#D5D8DB",
+              "type": 0,
+              "account_id": 32363618,
+              "_links": {
+                "self": {
+                  "href": "https://jukov9999.amocrm.ru/api/v4/leads/pipelines/9501726/statuses/143"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,508 @@
+{
+  "_total_items": 19,
+  "_page": 1,
+  "_page_count": 1,
+  "_links": {
+    "self": {
+      "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields?page=1&limit=250"
+    }
+  },
+  "_embedded": {
+    "custom_fields": [
+      {
+        "id": 946607,
+        "name": "utm_content",
+        "type": "tracking_data",
+        "account_id": 32363618,
+        "code": "UTM_CONTENT",
+        "sort": 12,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": "statistic",
+        "required_statuses": [],
+        "is_deletable": false,
+        "is_predefined": true,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946607?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 946609,
+        "name": "utm_medium",
+        "type": "tracking_data",
+        "account_id": 32363618,
+        "code": "UTM_MEDIUM",
+        "sort": 14,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": "statistic",
+        "required_statuses": [],
+        "is_deletable": false,
+        "is_predefined": true,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946609?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 946611,
+        "name": "utm_campaign",
+        "type": "tracking_data",
+        "account_id": 32363618,
+        "code": "UTM_CAMPAIGN",
+        "sort": 16,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": "statistic",
+        "required_statuses": [],
+        "is_deletable": false,
+        "is_predefined": true,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946611?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 946613,
+        "name": "utm_source",
+        "type": "tracking_data",
+        "account_id": 32363618,
+        "code": "UTM_SOURCE",
+        "sort": 18,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": "statistic",
+        "required_statuses": [],
+        "is_deletable": false,
+        "is_predefined": true,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946613?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 946615,
+        "name": "utm_term",
+        "type": "tracking_data",
+        "account_id": 32363618,
+        "code": "UTM_TERM",
+        "sort": 20,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": "statistic",
+        "required_statuses": [],
+        "is_deletable": false,
+        "is_predefined": true,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946615?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 946617,
+        "name": "utm_referrer",
+        "type": "tracking_data",
+        "account_id": 32363618,
+        "code": "UTM_REFERRER",
+        "sort": 22,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": "statistic",
+        "required_statuses": [],
+        "is_deletable": false,
+        "is_predefined": true,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946617?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 946619,
+        "name": "roistat",
+        "type": "tracking_data",
+        "account_id": 32363618,
+        "code": "ROISTAT",
+        "sort": 24,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": "statistic",
+        "required_statuses": [],
+        "is_deletable": false,
+        "is_predefined": true,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946619?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 946621,
+        "name": "referrer",
+        "type": "tracking_data",
+        "account_id": 32363618,
+        "code": "REFERRER",
+        "sort": 26,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": "statistic",
+        "required_statuses": [],
+        "is_deletable": false,
+        "is_predefined": true,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946621?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 946623,
+        "name": "openstat_service",
+        "type": "tracking_data",
+        "account_id": 32363618,
+        "code": "OPENSTAT_SERVICE",
+        "sort": 28,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": "statistic",
+        "required_statuses": [],
+        "is_deletable": false,
+        "is_predefined": true,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946623?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 946625,
+        "name": "openstat_campaign",
+        "type": "tracking_data",
+        "account_id": 32363618,
+        "code": "OPENSTAT_CAMPAIGN",
+        "sort": 30,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": "statistic",
+        "required_statuses": [],
+        "is_deletable": false,
+        "is_predefined": true,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946625?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 946627,
+        "name": "openstat_ad",
+        "type": "tracking_data",
+        "account_id": 32363618,
+        "code": "OPENSTAT_AD",
+        "sort": 32,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": "statistic",
+        "required_statuses": [],
+        "is_deletable": false,
+        "is_predefined": true,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946627?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 946629,
+        "name": "openstat_source",
+        "type": "tracking_data",
+        "account_id": 32363618,
+        "code": "OPENSTAT_SOURCE",
+        "sort": 34,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": "statistic",
+        "required_statuses": [],
+        "is_deletable": false,
+        "is_predefined": true,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946629?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 946631,
+        "name": "from",
+        "type": "tracking_data",
+        "account_id": 32363618,
+        "code": "FROM",
+        "sort": 36,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": "statistic",
+        "required_statuses": [],
+        "is_deletable": false,
+        "is_predefined": true,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946631?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 946633,
+        "name": "gclientid",
+        "type": "tracking_data",
+        "account_id": 32363618,
+        "code": "GCLIENTID",
+        "sort": 38,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": "statistic",
+        "required_statuses": [],
+        "is_deletable": false,
+        "is_predefined": true,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946633?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 946635,
+        "name": "_ym_uid",
+        "type": "tracking_data",
+        "account_id": 32363618,
+        "code": "_YM_UID",
+        "sort": 40,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": "statistic",
+        "required_statuses": [],
+        "is_deletable": false,
+        "is_predefined": true,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946635?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 946637,
+        "name": "_ym_counter",
+        "type": "tracking_data",
+        "account_id": 32363618,
+        "code": "_YM_COUNTER",
+        "sort": 42,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": "statistic",
+        "required_statuses": [],
+        "is_deletable": false,
+        "is_predefined": true,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946637?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 946639,
+        "name": "gclid",
+        "type": "tracking_data",
+        "account_id": 32363618,
+        "code": "GCLID",
+        "sort": 44,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": "statistic",
+        "required_statuses": [],
+        "is_deletable": false,
+        "is_predefined": true,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946639?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 946641,
+        "name": "yclid",
+        "type": "tracking_data",
+        "account_id": 32363618,
+        "code": "YCLID",
+        "sort": 46,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": "statistic",
+        "required_statuses": [],
+        "is_deletable": false,
+        "is_predefined": true,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946641?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 946643,
+        "name": "fbclid",
+        "type": "tracking_data",
+        "account_id": 32363618,
+        "code": "FBCLID",
+        "sort": 48,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": "statistic",
+        "required_statuses": [],
+        "is_deletable": false,
+        "is_predefined": true,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946643?page=1&limit=250"
+          }
+        }
+      }
+    ]
+  }
+}

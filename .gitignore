@@ -30,6 +30,7 @@ wheels/
 instructions/
 
 # Logs
+logs/
 *.log
 
 # Virtual Environment
@@ -46,7 +47,8 @@ ENV/
 
 # Sensitive data
 credentials/
-database/ 
+database/
+amo/tokens.json
 
 check_db.py
 check_db.pyc
