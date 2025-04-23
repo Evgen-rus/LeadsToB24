@@ -1,99 +1,354 @@
 {
-  "_total_items": 1,
+  "_total_items": 18,
   "_links": {
     "self": {
-      "href": "https://jukov9999.amocrm.ru/api/v4/leads/pipelines"
+      "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines"
     }
   },
   "_embedded": {
     "pipelines": [
       {
-        "id": 9501726,
-        "name": "Воронка",
+        "id": 2194891,
+        "name": "Частный дизайн",
         "sort": 1,
         "is_main": true,
         "is_unsorted_on": true,
         "is_archive": false,
-        "account_id": 32363618,
+        "account_id": 14277685,
         "_links": {
           "self": {
-            "href": "https://jukov9999.amocrm.ru/api/v4/leads/pipelines/9501726"
+            "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2194891"
           }
         },
         "_embedded": {
           "statuses": [
             {
-              "id": 75980378,
+              "id": 30848401,
               "name": "Неразобранное",
               "sort": 10,
               "is_editable": false,
-              "pipeline_id": 9501726,
+              "pipeline_id": 2194891,
               "color": "#c1c1c1",
               "type": 1,
-              "account_id": 32363618,
+              "account_id": 14277685,
               "_links": {
                 "self": {
-                  "href": "https://jukov9999.amocrm.ru/api/v4/leads/pipelines/9501726/statuses/75980378"
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2194891/statuses/30848401"
                 }
               }
             },
             {
-              "id": 75980382,
-              "name": "Первичный контакт",
+              "id": 56236246,
+              "name": "Ответная презентация",
               "sort": 20,
               "is_editable": true,
-              "pipeline_id": 9501726,
+              "pipeline_id": 2194891,
               "color": "#99ccff",
               "type": 0,
-              "account_id": 32363618,
+              "account_id": 14277685,
               "_links": {
                 "self": {
-                  "href": "https://jukov9999.amocrm.ru/api/v4/leads/pipelines/9501726/statuses/75980382"
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2194891/statuses/56236246"
                 }
               }
             },
             {
-              "id": 75980386,
-              "name": "Переговоры",
+              "id": 76039778,
+              "name": "Таргет",
               "sort": 30,
               "is_editable": true,
-              "pipeline_id": 9501726,
-              "color": "#ffff99",
+              "pipeline_id": 2194891,
+              "color": "#eb93ff",
               "type": 0,
-              "account_id": 32363618,
+              "account_id": 14277685,
               "_links": {
                 "self": {
-                  "href": "https://jukov9999.amocrm.ru/api/v4/leads/pipelines/9501726/statuses/75980386"
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2194891/statuses/76039778"
                 }
               }
             },
             {
-              "id": 75980390,
-              "name": "Принимают решение",
+              "id": 75310862,
+              "name": "iNSTAGRAM",
               "sort": 40,
               "is_editable": true,
-              "pipeline_id": 9501726,
-              "color": "#ffcc66",
+              "pipeline_id": 2194891,
+              "color": "#f9deff",
               "type": 0,
-              "account_id": 32363618,
+              "account_id": 14277685,
               "_links": {
                 "self": {
-                  "href": "https://jukov9999.amocrm.ru/api/v4/leads/pipelines/9501726/statuses/75980390"
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2194891/statuses/75310862"
                 }
               }
             },
             {
-              "id": 75980394,
-              "name": "Согласование договора",
+              "id": 71832702,
+              "name": "НЕЙРОБОТ",
               "sort": 50,
               "is_editable": true,
-              "pipeline_id": 9501726,
-              "color": "#ffcccc",
+              "pipeline_id": 2194891,
+              "color": "#99ccff",
               "type": 0,
-              "account_id": 32363618,
+              "account_id": 14277685,
               "_links": {
                 "self": {
-                  "href": "https://jukov9999.amocrm.ru/api/v4/leads/pipelines/9501726/statuses/75980394"
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2194891/statuses/71832702"
+                }
+              }
+            },
+            {
+              "id": 65976378,
+              "name": "тестовые сделки",
+              "sort": 60,
+              "is_editable": true,
+              "pipeline_id": 2194891,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2194891/statuses/65976378"
+                }
+              }
+            },
+            {
+              "id": 73045966,
+              "name": "Комплектация",
+              "sort": 70,
+              "is_editable": true,
+              "pipeline_id": 2194891,
+              "color": "#ebffb1",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2194891/statuses/73045966"
+                }
+              }
+            },
+            {
+              "id": 68384126,
+              "name": "DMP - LeadRecord",
+              "sort": 80,
+              "is_editable": true,
+              "pipeline_id": 2194891,
+              "color": "#ccc8f9",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2194891/statuses/68384126"
+                }
+              }
+            },
+            {
+              "id": 58714326,
+              "name": "БОТ WA",
+              "sort": 90,
+              "is_editable": true,
+              "pipeline_id": 2194891,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2194891/statuses/58714326"
+                }
+              }
+            },
+            {
+              "id": 68383798,
+              "name": "только писать",
+              "sort": 100,
+              "is_editable": true,
+              "pipeline_id": 2194891,
+              "color": "#ff8f92",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2194891/statuses/68383798"
+                }
+              }
+            },
+            {
+              "id": 58244258,
+              "name": "РАССылка whatsapp",
+              "sort": 110,
+              "is_editable": true,
+              "pipeline_id": 2194891,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2194891/statuses/58244258"
+                }
+              }
+            },
+            {
+              "id": 30848482,
+              "name": "пока не дозвонились",
+              "sort": 120,
+              "is_editable": true,
+              "pipeline_id": 2194891,
+              "color": "#ffdbdb",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2194891/statuses/30848482"
+                }
+              }
+            },
+            {
+              "id": 66505842,
+              "name": "целевой",
+              "sort": 130,
+              "is_editable": true,
+              "pipeline_id": 2194891,
+              "color": "#87f2c0",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2194891/statuses/66505842"
+                }
+              }
+            },
+            {
+              "id": 64847754,
+              "name": "Потенциалы",
+              "sort": 140,
+              "is_editable": true,
+              "pipeline_id": 2194891,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2194891/statuses/64847754"
+                }
+              }
+            },
+            {
+              "id": 30848404,
+              "name": "Квалифицирован",
+              "sort": 150,
+              "is_editable": true,
+              "pipeline_id": 2194891,
+              "color": "#e6e8ea",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2194891/statuses/30848404"
+                }
+              }
+            },
+            {
+              "id": 58652238,
+              "name": "Квалифицирован (3 мес)",
+              "sort": 160,
+              "is_editable": true,
+              "pipeline_id": 2194891,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2194891/statuses/58652238"
+                }
+              }
+            },
+            {
+              "id": 59857278,
+              "name": "Квалифицирован (6+ мес)",
+              "sort": 170,
+              "is_editable": true,
+              "pipeline_id": 2194891,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2194891/statuses/59857278"
+                }
+              }
+            },
+            {
+              "id": 52633546,
+              "name": "Клиентская база",
+              "sort": 180,
+              "is_editable": true,
+              "pipeline_id": 2194891,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2194891/statuses/52633546"
+                }
+              }
+            },
+            {
+              "id": 73589166,
+              "name": "назначена встреча",
+              "sort": 190,
+              "is_editable": true,
+              "pipeline_id": 2194891,
+              "color": "#ff8f92",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2194891/statuses/73589166"
+                }
+              }
+            },
+            {
+              "id": 52633573,
+              "name": "Встреча проведена",
+              "sort": 200,
+              "is_editable": true,
+              "pipeline_id": 2194891,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2194891/statuses/52633573"
+                }
+              }
+            },
+            {
+              "id": 52888366,
+              "name": "Партнёрка",
+              "sort": 210,
+              "is_editable": true,
+              "pipeline_id": 2194891,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2194891/statuses/52888366"
+                }
+              }
+            },
+            {
+              "id": 30848467,
+              "name": "ДОГОВОР",
+              "sort": 220,
+              "is_editable": true,
+              "pipeline_id": 2194891,
+              "color": "#f9deff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2194891/statuses/30848467"
                 }
               }
             },
@@ -102,13 +357,13 @@
               "name": "Успешно реализовано",
               "sort": 10000,
               "is_editable": false,
-              "pipeline_id": 9501726,
+              "pipeline_id": 2194891,
               "color": "#CCFF66",
               "type": 0,
-              "account_id": 32363618,
+              "account_id": 14277685,
               "_links": {
                 "self": {
-                  "href": "https://jukov9999.amocrm.ru/api/v4/leads/pipelines/9501726/statuses/142"
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2194891/statuses/142"
                 }
               }
             },
@@ -117,13 +372,2989 @@
               "name": "Закрыто и не реализовано",
               "sort": 11000,
               "is_editable": false,
-              "pipeline_id": 9501726,
+              "pipeline_id": 2194891,
               "color": "#D5D8DB",
               "type": 0,
-              "account_id": 32363618,
+              "account_id": 14277685,
               "_links": {
                 "self": {
-                  "href": "https://jukov9999.amocrm.ru/api/v4/leads/pipelines/9501726/statuses/143"
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2194891/statuses/143"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": 1930285,
+        "name": "Девелоперы",
+        "sort": 2,
+        "is_main": false,
+        "is_unsorted_on": true,
+        "is_archive": false,
+        "account_id": 14277685,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/1930285"
+          }
+        },
+        "_embedded": {
+          "statuses": [
+            {
+              "id": 29009398,
+              "name": "Неразобранное",
+              "sort": 10,
+              "is_editable": false,
+              "pipeline_id": 1930285,
+              "color": "#c1c1c1",
+              "type": 1,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/1930285/statuses/29009398"
+                }
+              }
+            },
+            {
+              "id": 29009401,
+              "name": "В РАБОТЕ",
+              "sort": 20,
+              "is_editable": true,
+              "pipeline_id": 1930285,
+              "color": "#ccc8f9",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/1930285/statuses/29009401"
+                }
+              }
+            },
+            {
+              "id": 29009404,
+              "name": "ИДЕТ ТЕНДЕР",
+              "sort": 30,
+              "is_editable": true,
+              "pipeline_id": 1930285,
+              "color": "#f9deff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/1930285/statuses/29009404"
+                }
+              }
+            },
+            {
+              "id": 60390630,
+              "name": "потенциал",
+              "sort": 40,
+              "is_editable": true,
+              "pipeline_id": 1930285,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/1930285/statuses/60390630"
+                }
+              }
+            },
+            {
+              "id": 29182444,
+              "name": "СОГЛАСОВАНИЕ ДОГОВОРА",
+              "sort": 50,
+              "is_editable": true,
+              "pipeline_id": 1930285,
+              "color": "#ffc8c8",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/1930285/statuses/29182444"
+                }
+              }
+            },
+            {
+              "id": 40282174,
+              "name": "ВЫСТАВЛЕН СЧЕТ (ДОГОВОР ПОДПИСАН)",
+              "sort": 60,
+              "is_editable": true,
+              "pipeline_id": 1930285,
+              "color": "#ff8f92",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/1930285/statuses/40282174"
+                }
+              }
+            },
+            {
+              "id": 142,
+              "name": "Успешно реализовано",
+              "sort": 10000,
+              "is_editable": false,
+              "pipeline_id": 1930285,
+              "color": "#CCFF66",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/1930285/statuses/142"
+                }
+              }
+            },
+            {
+              "id": 143,
+              "name": "Закрыто и не реализовано",
+              "sort": 11000,
+              "is_editable": false,
+              "pipeline_id": 1930285,
+              "color": "#D5D8DB",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/1930285/statuses/143"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": 2199247,
+        "name": "Коммерческий дизайн",
+        "sort": 3,
+        "is_main": false,
+        "is_unsorted_on": true,
+        "is_archive": false,
+        "account_id": 14277685,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2199247"
+          }
+        },
+        "_embedded": {
+          "statuses": [
+            {
+              "id": 30877270,
+              "name": "Неразобранное",
+              "sort": 10,
+              "is_editable": false,
+              "pipeline_id": 2199247,
+              "color": "#c1c1c1",
+              "type": 1,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2199247/statuses/30877270"
+                }
+              }
+            },
+            {
+              "id": 56238342,
+              "name": "Ответная презентация",
+              "sort": 20,
+              "is_editable": true,
+              "pipeline_id": 2199247,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2199247/statuses/56238342"
+                }
+              }
+            },
+            {
+              "id": 52715110,
+              "name": "Пока не дозвонились",
+              "sort": 30,
+              "is_editable": true,
+              "pipeline_id": 2199247,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2199247/statuses/52715110"
+                }
+              }
+            },
+            {
+              "id": 68732678,
+              "name": "DMP",
+              "sort": 40,
+              "is_editable": true,
+              "pipeline_id": 2199247,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2199247/statuses/68732678"
+                }
+              }
+            },
+            {
+              "id": 30885088,
+              "name": "НОВЫЙ ЛИД",
+              "sort": 50,
+              "is_editable": true,
+              "pipeline_id": 2199247,
+              "color": "#ccc8f9",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2199247/statuses/30885088"
+                }
+              }
+            },
+            {
+              "id": 53052554,
+              "name": "условный отказ",
+              "sort": 60,
+              "is_editable": true,
+              "pipeline_id": 2199247,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2199247/statuses/53052554"
+                }
+              }
+            },
+            {
+              "id": 30877276,
+              "name": "В РАБОТЕ",
+              "sort": 70,
+              "is_editable": true,
+              "pipeline_id": 2199247,
+              "color": "#f9deff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2199247/statuses/30877276"
+                }
+              }
+            },
+            {
+              "id": 30877279,
+              "name": "ТЕНДЕР (ПРИНИМАЕТ РЕШЕНИЕ)",
+              "sort": 80,
+              "is_editable": true,
+              "pipeline_id": 2199247,
+              "color": "#ffdbdb",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2199247/statuses/30877279"
+                }
+              }
+            },
+            {
+              "id": 60390626,
+              "name": "потенциалы",
+              "sort": 90,
+              "is_editable": true,
+              "pipeline_id": 2199247,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2199247/statuses/60390626"
+                }
+              }
+            },
+            {
+              "id": 37399807,
+              "name": "СОГЛАСОВАНИЕ ДОГОВОРА",
+              "sort": 100,
+              "is_editable": true,
+              "pipeline_id": 2199247,
+              "color": "#ffc8c8",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2199247/statuses/37399807"
+                }
+              }
+            },
+            {
+              "id": 40282231,
+              "name": "ВЫСТАВЛЕН СЧЕТ (ДОГОВОР ПОДПИСАН)",
+              "sort": 110,
+              "is_editable": true,
+              "pipeline_id": 2199247,
+              "color": "#ff8f92",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2199247/statuses/40282231"
+                }
+              }
+            },
+            {
+              "id": 142,
+              "name": "Успешно реализовано",
+              "sort": 10000,
+              "is_editable": false,
+              "pipeline_id": 2199247,
+              "color": "#CCFF66",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2199247/statuses/142"
+                }
+              }
+            },
+            {
+              "id": 143,
+              "name": "Закрыто и не реализовано",
+              "sort": 11000,
+              "is_editable": false,
+              "pipeline_id": 2199247,
+              "color": "#D5D8DB",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/2199247/statuses/143"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": 3709303,
+        "name": "КОМПЛЕКТАЦИЯ",
+        "sort": 4,
+        "is_main": false,
+        "is_unsorted_on": true,
+        "is_archive": true,
+        "account_id": 14277685,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/3709303"
+          }
+        },
+        "_embedded": {
+          "statuses": [
+            {
+              "id": 36023446,
+              "name": "Неразобранное",
+              "sort": 10,
+              "is_editable": false,
+              "pipeline_id": 3709303,
+              "color": "#c1c1c1",
+              "type": 1,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/3709303/statuses/36023446"
+                }
+              }
+            },
+            {
+              "id": 36023449,
+              "name": "УКРУПНЕННАЯ СПЕЦИФИКАЦИЯ",
+              "sort": 20,
+              "is_editable": true,
+              "pipeline_id": 3709303,
+              "color": "#f3beff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/3709303/statuses/36023449"
+                }
+              }
+            },
+            {
+              "id": 36023452,
+              "name": "СОГЛАСОВАНИЕ СТОИМОСТИ/ОБРАЗЦЫ",
+              "sort": 30,
+              "is_editable": true,
+              "pipeline_id": 3709303,
+              "color": "#ffc8c8",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/3709303/statuses/36023452"
+                }
+              }
+            },
+            {
+              "id": 36055231,
+              "name": "СПЕЦИФИКАЦИЯ ПОСЛЕ РД",
+              "sort": 40,
+              "is_editable": true,
+              "pipeline_id": 3709303,
+              "color": "#87f2c0",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/3709303/statuses/36055231"
+                }
+              }
+            },
+            {
+              "id": 40213756,
+              "name": "СПЕЦИФИКАЦИЯ НА СТОЛЯРКУ",
+              "sort": 50,
+              "is_editable": true,
+              "pipeline_id": 3709303,
+              "color": "#ffeab2",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/3709303/statuses/40213756"
+                }
+              }
+            },
+            {
+              "id": 40213768,
+              "name": "ОБРАЗЦЫ",
+              "sort": 60,
+              "is_editable": true,
+              "pipeline_id": 3709303,
+              "color": "#ebffb1",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/3709303/statuses/40213768"
+                }
+              }
+            },
+            {
+              "id": 142,
+              "name": "УСПЕШНО РЕАЛИЗОВАНО",
+              "sort": 10000,
+              "is_editable": false,
+              "pipeline_id": 3709303,
+              "color": "#CCFF66",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/3709303/statuses/142"
+                }
+              }
+            },
+            {
+              "id": 143,
+              "name": "Закрыто и не реализовано",
+              "sort": 11000,
+              "is_editable": false,
+              "pipeline_id": 3709303,
+              "color": "#D5D8DB",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/3709303/statuses/143"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": 7123262,
+        "name": "Дизайн КОММЕРЧЕСКИЙ",
+        "sort": 5,
+        "is_main": false,
+        "is_unsorted_on": false,
+        "is_archive": false,
+        "account_id": 14277685,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/7123262"
+          }
+        },
+        "_embedded": {
+          "statuses": [
+            {
+              "id": 59595834,
+              "name": "Неразобранное",
+              "sort": 10,
+              "is_editable": false,
+              "pipeline_id": 7123262,
+              "color": "#c1c1c1",
+              "type": 1,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/7123262/statuses/59595834"
+                }
+              }
+            },
+            {
+              "id": 59595838,
+              "name": "Новый договор/бриф, замер",
+              "sort": 20,
+              "is_editable": true,
+              "pipeline_id": 7123262,
+              "color": "#fffeb2",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/7123262/statuses/59595838"
+                }
+              }
+            },
+            {
+              "id": 59597398,
+              "name": "планировка/концепция",
+              "sort": 30,
+              "is_editable": true,
+              "pipeline_id": 7123262,
+              "color": "#fffd7f",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/7123262/statuses/59597398"
+                }
+              }
+            },
+            {
+              "id": 59597418,
+              "name": "визуализация",
+              "sort": 40,
+              "is_editable": true,
+              "pipeline_id": 7123262,
+              "color": "#ffdbdb",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/7123262/statuses/59597418"
+                }
+              }
+            },
+            {
+              "id": 59597438,
+              "name": "рабочка/специцикация",
+              "sort": 50,
+              "is_editable": true,
+              "pipeline_id": 7123262,
+              "color": "#f2f3f4",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/7123262/statuses/59597438"
+                }
+              }
+            },
+            {
+              "id": 59597462,
+              "name": "авторский надзор",
+              "sort": 60,
+              "is_editable": true,
+              "pipeline_id": 7123262,
+              "color": "#ebffb1",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/7123262/statuses/59597462"
+                }
+              }
+            },
+            {
+              "id": 62591294,
+              "name": "на стопе",
+              "sort": 70,
+              "is_editable": true,
+              "pipeline_id": 7123262,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/7123262/statuses/62591294"
+                }
+              }
+            },
+            {
+              "id": 59597458,
+              "name": "отзыв",
+              "sort": 80,
+              "is_editable": true,
+              "pipeline_id": 7123262,
+              "color": "#ffc8c8",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/7123262/statuses/59597458"
+                }
+              }
+            },
+            {
+              "id": 142,
+              "name": "Успешно реализовано",
+              "sort": 10000,
+              "is_editable": false,
+              "pipeline_id": 7123262,
+              "color": "#CCFF66",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/7123262/statuses/142"
+                }
+              }
+            },
+            {
+              "id": 143,
+              "name": "Закрыто и не реализовано",
+              "sort": 11000,
+              "is_editable": false,
+              "pipeline_id": 7123262,
+              "color": "#D5D8DB",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/7123262/statuses/143"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": 8785054,
+        "name": "Проекты",
+        "sort": 6,
+        "is_main": false,
+        "is_unsorted_on": true,
+        "is_archive": false,
+        "account_id": 14277685,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8785054"
+          }
+        },
+        "_embedded": {
+          "statuses": [
+            {
+              "id": 71056810,
+              "name": "Неразобранное",
+              "sort": 10,
+              "is_editable": false,
+              "pipeline_id": 8785054,
+              "color": "#c1c1c1",
+              "type": 1,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8785054/statuses/71056810"
+                }
+              }
+            },
+            {
+              "id": 71056814,
+              "name": "ЗВОНКИ",
+              "sort": 20,
+              "is_editable": true,
+              "pipeline_id": 8785054,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8785054/statuses/71056814"
+                }
+              }
+            },
+            {
+              "id": 71056818,
+              "name": "WHATSAPP",
+              "sort": 30,
+              "is_editable": true,
+              "pipeline_id": 8785054,
+              "color": "#ffff99",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8785054/statuses/71056818"
+                }
+              }
+            },
+            {
+              "id": 142,
+              "name": "Успешно реализовано",
+              "sort": 10000,
+              "is_editable": false,
+              "pipeline_id": 8785054,
+              "color": "#CCFF66",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8785054/statuses/142"
+                }
+              }
+            },
+            {
+              "id": 143,
+              "name": "Закрыто и не реализовано",
+              "sort": 11000,
+              "is_editable": false,
+              "pipeline_id": 8785054,
+              "color": "#D5D8DB",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8785054/statuses/143"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": 5868550,
+        "name": "Dubai",
+        "sort": 7,
+        "is_main": false,
+        "is_unsorted_on": true,
+        "is_archive": false,
+        "account_id": 14277685,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5868550"
+          }
+        },
+        "_embedded": {
+          "statuses": [
+            {
+              "id": 51294697,
+              "name": "Неразобранное",
+              "sort": 10,
+              "is_editable": false,
+              "pipeline_id": 5868550,
+              "color": "#c1c1c1",
+              "type": 1,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5868550/statuses/51294697"
+                }
+              }
+            },
+            {
+              "id": 56358554,
+              "name": "new leads",
+              "sort": 20,
+              "is_editable": true,
+              "pipeline_id": 5868550,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5868550/statuses/56358554"
+                }
+              }
+            },
+            {
+              "id": 52786258,
+              "name": "did not answer",
+              "sort": 30,
+              "is_editable": true,
+              "pipeline_id": 5868550,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5868550/statuses/52786258"
+                }
+              }
+            },
+            {
+              "id": 74272210,
+              "name": "Русские",
+              "sort": 40,
+              "is_editable": true,
+              "pipeline_id": 5868550,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5868550/statuses/74272210"
+                }
+              }
+            },
+            {
+              "id": 75493926,
+              "name": "РАССЫЛКА",
+              "sort": 50,
+              "is_editable": true,
+              "pipeline_id": 5868550,
+              "color": "#87f2c0",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5868550/statuses/75493926"
+                }
+              }
+            },
+            {
+              "id": 75509718,
+              "name": "test",
+              "sort": 60,
+              "is_editable": true,
+              "pipeline_id": 5868550,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5868550/statuses/75509718"
+                }
+              }
+            },
+            {
+              "id": 74272214,
+              "name": "Target 3months",
+              "sort": 70,
+              "is_editable": true,
+              "pipeline_id": 5868550,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5868550/statuses/74272214"
+                }
+              }
+            },
+            {
+              "id": 74272218,
+              "name": "Target 6+months",
+              "sort": 80,
+              "is_editable": true,
+              "pipeline_id": 5868550,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5868550/statuses/74272218"
+                }
+              }
+            },
+            {
+              "id": 74272746,
+              "name": "Clients Base",
+              "sort": 90,
+              "is_editable": true,
+              "pipeline_id": 5868550,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5868550/statuses/74272746"
+                }
+              }
+            },
+            {
+              "id": 74074538,
+              "name": "Competent",
+              "sort": 100,
+              "is_editable": true,
+              "pipeline_id": 5868550,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5868550/statuses/74074538"
+                }
+              }
+            },
+            {
+              "id": 52786262,
+              "name": "meeting is planned",
+              "sort": 110,
+              "is_editable": true,
+              "pipeline_id": 5868550,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5868550/statuses/52786262"
+                }
+              }
+            },
+            {
+              "id": 70000986,
+              "name": "meeting was held",
+              "sort": 120,
+              "is_editable": true,
+              "pipeline_id": 5868550,
+              "color": "#ffdbdb",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5868550/statuses/70000986"
+                }
+              }
+            },
+            {
+              "id": 70000990,
+              "name": "negotiation",
+              "sort": 130,
+              "is_editable": true,
+              "pipeline_id": 5868550,
+              "color": "#ffeab2",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5868550/statuses/70000990"
+                }
+              }
+            },
+            {
+              "id": 70000994,
+              "name": "postponed potential",
+              "sort": 140,
+              "is_editable": true,
+              "pipeline_id": 5868550,
+              "color": "#f9deff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5868550/statuses/70000994"
+                }
+              }
+            },
+            {
+              "id": 59593338,
+              "name": "agreement",
+              "sort": 150,
+              "is_editable": true,
+              "pipeline_id": 5868550,
+              "color": "#ffce5a",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5868550/statuses/59593338"
+                }
+              }
+            },
+            {
+              "id": 142,
+              "name": "Done",
+              "sort": 10000,
+              "is_editable": false,
+              "pipeline_id": 5868550,
+              "color": "#CCFF66",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5868550/statuses/142"
+                }
+              }
+            },
+            {
+              "id": 143,
+              "name": "Closed ",
+              "sort": 11000,
+              "is_editable": false,
+              "pipeline_id": 5868550,
+              "color": "#D5D8DB",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5868550/statuses/143"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": 7122286,
+        "name": "Design Dubai",
+        "sort": 8,
+        "is_main": false,
+        "is_unsorted_on": true,
+        "is_archive": false,
+        "account_id": 14277685,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/7122286"
+          }
+        },
+        "_embedded": {
+          "statuses": [
+            {
+              "id": 59589214,
+              "name": "Неразобранное",
+              "sort": 10,
+              "is_editable": false,
+              "pipeline_id": 7122286,
+              "color": "#c1c1c1",
+              "type": 1,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/7122286/statuses/59589214"
+                }
+              }
+            },
+            {
+              "id": 59589218,
+              "name": "briefing / froze",
+              "sort": 20,
+              "is_editable": true,
+              "pipeline_id": 7122286,
+              "color": "#d6eaff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/7122286/statuses/59589218"
+                }
+              }
+            },
+            {
+              "id": 59589222,
+              "name": "1. plan/Concept",
+              "sort": 30,
+              "is_editable": true,
+              "pipeline_id": 7122286,
+              "color": "#c1e0ff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/7122286/statuses/59589222"
+                }
+              }
+            },
+            {
+              "id": 59591378,
+              "name": "2. 3d",
+              "sort": 40,
+              "is_editable": true,
+              "pipeline_id": 7122286,
+              "color": "#ccc8f9",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/7122286/statuses/59591378"
+                }
+              }
+            },
+            {
+              "id": 59591382,
+              "name": "3. working draft",
+              "sort": 50,
+              "is_editable": true,
+              "pipeline_id": 7122286,
+              "color": "#f3beff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/7122286/statuses/59591382"
+                }
+              }
+            },
+            {
+              "id": 59591386,
+              "name": "sales implementation",
+              "sort": 60,
+              "is_editable": true,
+              "pipeline_id": 7122286,
+              "color": "#e6e8ea",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/7122286/statuses/59591386"
+                }
+              }
+            },
+            {
+              "id": 59591390,
+              "name": "supervision",
+              "sort": 70,
+              "is_editable": true,
+              "pipeline_id": 7122286,
+              "color": "#fff000",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/7122286/statuses/59591390"
+                }
+              }
+            },
+            {
+              "id": 59591394,
+              "name": "feedback / photo",
+              "sort": 80,
+              "is_editable": true,
+              "pipeline_id": 7122286,
+              "color": "#e6e8ea",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/7122286/statuses/59591394"
+                }
+              }
+            },
+            {
+              "id": 61133754,
+              "name": "Stop",
+              "sort": 90,
+              "is_editable": true,
+              "pipeline_id": 7122286,
+              "color": "#e6e8ea",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/7122286/statuses/61133754"
+                }
+              }
+            },
+            {
+              "id": 142,
+              "name": "Успешно реализовано",
+              "sort": 10000,
+              "is_editable": false,
+              "pipeline_id": 7122286,
+              "color": "#CCFF66",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/7122286/statuses/142"
+                }
+              }
+            },
+            {
+              "id": 143,
+              "name": "Закрыто и не реализовано",
+              "sort": 11000,
+              "is_editable": false,
+              "pipeline_id": 7122286,
+              "color": "#D5D8DB",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/7122286/statuses/143"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": 5222134,
+        "name": "Реализация",
+        "sort": 9,
+        "is_main": false,
+        "is_unsorted_on": true,
+        "is_archive": true,
+        "account_id": 14277685,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5222134"
+          }
+        },
+        "_embedded": {
+          "statuses": [
+            {
+              "id": 46672360,
+              "name": "Неразобранное",
+              "sort": 10,
+              "is_editable": false,
+              "pipeline_id": 5222134,
+              "color": "#c1c1c1",
+              "type": 1,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5222134/statuses/46672360"
+                }
+              }
+            },
+            {
+              "id": 46673863,
+              "name": "Неразобранное",
+              "sort": 20,
+              "is_editable": true,
+              "pipeline_id": 5222134,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5222134/statuses/46673863"
+                }
+              }
+            },
+            {
+              "id": 46672363,
+              "name": "Дизайн проект завершен",
+              "sort": 30,
+              "is_editable": true,
+              "pipeline_id": 5222134,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5222134/statuses/46672363"
+                }
+              }
+            },
+            {
+              "id": 46674118,
+              "name": "Первый контакт",
+              "sort": 40,
+              "is_editable": true,
+              "pipeline_id": 5222134,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5222134/statuses/46674118"
+                }
+              }
+            },
+            {
+              "id": 46672366,
+              "name": "КП по стройке/встреча",
+              "sort": 50,
+              "is_editable": true,
+              "pipeline_id": 5222134,
+              "color": "#ffff99",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5222134/statuses/46672366"
+                }
+              }
+            },
+            {
+              "id": 46672369,
+              "name": "Смета и спецификация готовы",
+              "sort": 60,
+              "is_editable": true,
+              "pipeline_id": 5222134,
+              "color": "#ffcc66",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5222134/statuses/46672369"
+                }
+              }
+            },
+            {
+              "id": 46672600,
+              "name": "ВСТРЕЧА -ПРОДАЖА",
+              "sort": 70,
+              "is_editable": true,
+              "pipeline_id": 5222134,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5222134/statuses/46672600"
+                }
+              }
+            },
+            {
+              "id": 46672603,
+              "name": "2 договора заключены",
+              "sort": 80,
+              "is_editable": true,
+              "pipeline_id": 5222134,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5222134/statuses/46672603"
+                }
+              }
+            },
+            {
+              "id": 46672606,
+              "name": "ПЕРВАЯ СДЕЛКА В КОМПЛЕКТАЦИИ",
+              "sort": 90,
+              "is_editable": true,
+              "pipeline_id": 5222134,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5222134/statuses/46672606"
+                }
+              }
+            },
+            {
+              "id": 46672609,
+              "name": "1 этап завершен",
+              "sort": 100,
+              "is_editable": true,
+              "pipeline_id": 5222134,
+              "color": "#87f2c0",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5222134/statuses/46672609"
+                }
+              }
+            },
+            {
+              "id": 46672612,
+              "name": "2 ЭТАП ЗАВЕРшЕН",
+              "sort": 110,
+              "is_editable": true,
+              "pipeline_id": 5222134,
+              "color": "#87f2c0",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5222134/statuses/46672612"
+                }
+              }
+            },
+            {
+              "id": 46672615,
+              "name": "3 ЭТАП ЗАВЕРшЕН",
+              "sort": 120,
+              "is_editable": true,
+              "pipeline_id": 5222134,
+              "color": "#87f2c0",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5222134/statuses/46672615"
+                }
+              }
+            },
+            {
+              "id": 46672618,
+              "name": "4 ЭТАП ЗАВЕРшЕН",
+              "sort": 130,
+              "is_editable": true,
+              "pipeline_id": 5222134,
+              "color": "#87f2c0",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5222134/statuses/46672618"
+                }
+              }
+            },
+            {
+              "id": 46672621,
+              "name": "ЗАВЕРшАЕМ КОМПЛЕКТАЦИЮ",
+              "sort": 140,
+              "is_editable": true,
+              "pipeline_id": 5222134,
+              "color": "#87f2c0",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5222134/statuses/46672621"
+                }
+              }
+            },
+            {
+              "id": 142,
+              "name": "ОБЬЕКТ ПОЛНОСТЬЮ ЗАВЕРШЕН",
+              "sort": 10000,
+              "is_editable": false,
+              "pipeline_id": 5222134,
+              "color": "#CCFF66",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5222134/statuses/142"
+                }
+              }
+            },
+            {
+              "id": 143,
+              "name": "Закрыто и не реализовано",
+              "sort": 11000,
+              "is_editable": false,
+              "pipeline_id": 5222134,
+              "color": "#D5D8DB",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/5222134/statuses/143"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": 6459650,
+        "name": "Дизайн",
+        "sort": 10,
+        "is_main": false,
+        "is_unsorted_on": true,
+        "is_archive": false,
+        "account_id": 14277685,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6459650"
+          }
+        },
+        "_embedded": {
+          "statuses": [
+            {
+              "id": 55155102,
+              "name": "Неразобранное",
+              "sort": 10,
+              "is_editable": false,
+              "pipeline_id": 6459650,
+              "color": "#c1c1c1",
+              "type": 1,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6459650/statuses/55155102"
+                }
+              }
+            },
+            {
+              "id": 55155106,
+              "name": "договор подписан",
+              "sort": 20,
+              "is_editable": true,
+              "pipeline_id": 6459650,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6459650/statuses/55155106"
+                }
+              }
+            },
+            {
+              "id": 55155110,
+              "name": "обмер/бриф совершен",
+              "sort": 30,
+              "is_editable": true,
+              "pipeline_id": 6459650,
+              "color": "#ffff99",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6459650/statuses/55155110"
+                }
+              }
+            },
+            {
+              "id": 55155114,
+              "name": "планировка утверждена",
+              "sort": 40,
+              "is_editable": true,
+              "pipeline_id": 6459650,
+              "color": "#ffcc66",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6459650/statuses/55155114"
+                }
+              }
+            },
+            {
+              "id": 56491298,
+              "name": "1 этап подписан",
+              "sort": 50,
+              "is_editable": true,
+              "pipeline_id": 6459650,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6459650/statuses/56491298"
+                }
+              }
+            },
+            {
+              "id": 56491302,
+              "name": "визуализации 50%",
+              "sort": 60,
+              "is_editable": true,
+              "pipeline_id": 6459650,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6459650/statuses/56491302"
+                }
+              }
+            },
+            {
+              "id": 56491306,
+              "name": "визуализации завершены",
+              "sort": 70,
+              "is_editable": true,
+              "pipeline_id": 6459650,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6459650/statuses/56491306"
+                }
+              }
+            },
+            {
+              "id": 142,
+              "name": "основные чертежи согласованы с клиентом ",
+              "sort": 10000,
+              "is_editable": false,
+              "pipeline_id": 6459650,
+              "color": "#CCFF66",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6459650/statuses/142"
+                }
+              }
+            },
+            {
+              "id": 143,
+              "name": "проект окончен ",
+              "sort": 11000,
+              "is_editable": false,
+              "pipeline_id": 6459650,
+              "color": "#D5D8DB",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6459650/statuses/143"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": 6630374,
+        "name": "Partnerships",
+        "sort": 11,
+        "is_main": false,
+        "is_unsorted_on": true,
+        "is_archive": false,
+        "account_id": 14277685,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6630374"
+          }
+        },
+        "_embedded": {
+          "statuses": [
+            {
+              "id": 56281698,
+              "name": "Неразобранное",
+              "sort": 10,
+              "is_editable": false,
+              "pipeline_id": 6630374,
+              "color": "#c1c1c1",
+              "type": 1,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6630374/statuses/56281698"
+                }
+              }
+            },
+            {
+              "id": 56282298,
+              "name": "aLL LEADS",
+              "sort": 20,
+              "is_editable": true,
+              "pipeline_id": 6630374,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6630374/statuses/56282298"
+                }
+              }
+            },
+            {
+              "id": 56281702,
+              "name": "Initial Contact",
+              "sort": 30,
+              "is_editable": true,
+              "pipeline_id": 6630374,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6630374/statuses/56281702"
+                }
+              }
+            },
+            {
+              "id": 56281706,
+              "name": "OFFER FOR THE MEETING",
+              "sort": 40,
+              "is_editable": true,
+              "pipeline_id": 6630374,
+              "color": "#ffff99",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6630374/statuses/56281706"
+                }
+              }
+            },
+            {
+              "id": 56281710,
+              "name": "MEETING",
+              "sort": 50,
+              "is_editable": true,
+              "pipeline_id": 6630374,
+              "color": "#ffcc66",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6630374/statuses/56281710"
+                }
+              }
+            },
+            {
+              "id": 56282210,
+              "name": "POTENTIAL",
+              "sort": 60,
+              "is_editable": true,
+              "pipeline_id": 6630374,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6630374/statuses/56282210"
+                }
+              }
+            },
+            {
+              "id": 56282214,
+              "name": "CONTRACT",
+              "sort": 70,
+              "is_editable": true,
+              "pipeline_id": 6630374,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6630374/statuses/56282214"
+                }
+              }
+            },
+            {
+              "id": 142,
+              "name": "Closed - won",
+              "sort": 10000,
+              "is_editable": false,
+              "pipeline_id": 6630374,
+              "color": "#CCFF66",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6630374/statuses/142"
+                }
+              }
+            },
+            {
+              "id": 143,
+              "name": "Closed - lost",
+              "sort": 11000,
+              "is_editable": false,
+              "pipeline_id": 6630374,
+              "color": "#D5D8DB",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6630374/statuses/143"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": 6639230,
+        "name": "Developers",
+        "sort": 12,
+        "is_main": false,
+        "is_unsorted_on": true,
+        "is_archive": false,
+        "account_id": 14277685,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6639230"
+          }
+        },
+        "_embedded": {
+          "statuses": [
+            {
+              "id": 56341778,
+              "name": "Неразобранное",
+              "sort": 10,
+              "is_editable": false,
+              "pipeline_id": 6639230,
+              "color": "#c1c1c1",
+              "type": 1,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6639230/statuses/56341778"
+                }
+              }
+            },
+            {
+              "id": 56341782,
+              "name": "Initial Contact",
+              "sort": 20,
+              "is_editable": true,
+              "pipeline_id": 6639230,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6639230/statuses/56341782"
+                }
+              }
+            },
+            {
+              "id": 56341786,
+              "name": "Offer made",
+              "sort": 30,
+              "is_editable": true,
+              "pipeline_id": 6639230,
+              "color": "#ffff99",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6639230/statuses/56341786"
+                }
+              }
+            },
+            {
+              "id": 56341790,
+              "name": "Negotiation",
+              "sort": 40,
+              "is_editable": true,
+              "pipeline_id": 6639230,
+              "color": "#ffcc66",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6639230/statuses/56341790"
+                }
+              }
+            },
+            {
+              "id": 56341886,
+              "name": "Commercial offer",
+              "sort": 50,
+              "is_editable": true,
+              "pipeline_id": 6639230,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6639230/statuses/56341886"
+                }
+              }
+            },
+            {
+              "id": 56341890,
+              "name": "Contract",
+              "sort": 60,
+              "is_editable": true,
+              "pipeline_id": 6639230,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6639230/statuses/56341890"
+                }
+              }
+            },
+            {
+              "id": 142,
+              "name": "Closed - won",
+              "sort": 10000,
+              "is_editable": false,
+              "pipeline_id": 6639230,
+              "color": "#CCFF66",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6639230/statuses/142"
+                }
+              }
+            },
+            {
+              "id": 143,
+              "name": "Closed - lost",
+              "sort": 11000,
+              "is_editable": false,
+              "pipeline_id": 6639230,
+              "color": "#D5D8DB",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6639230/statuses/143"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": 8110638,
+        "name": "BALCON Dubai",
+        "sort": 13,
+        "is_main": false,
+        "is_unsorted_on": false,
+        "is_archive": false,
+        "account_id": 14277685,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8110638"
+          }
+        },
+        "_embedded": {
+          "statuses": [
+            {
+              "id": 66381362,
+              "name": "Неразобранное",
+              "sort": 10,
+              "is_editable": false,
+              "pipeline_id": 8110638,
+              "color": "#c1c1c1",
+              "type": 1,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8110638/statuses/66381362"
+                }
+              }
+            },
+            {
+              "id": 66381366,
+              "name": "Новый лид",
+              "sort": 20,
+              "is_editable": true,
+              "pipeline_id": 8110638,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8110638/statuses/66381366"
+                }
+              }
+            },
+            {
+              "id": 66425022,
+              "name": "не ответил",
+              "sort": 30,
+              "is_editable": true,
+              "pipeline_id": 8110638,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8110638/statuses/66425022"
+                }
+              }
+            },
+            {
+              "id": 66583478,
+              "name": "партнеры",
+              "sort": 40,
+              "is_editable": true,
+              "pipeline_id": 8110638,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8110638/statuses/66583478"
+                }
+              }
+            },
+            {
+              "id": 75547438,
+              "name": "рассылка",
+              "sort": 50,
+              "is_editable": true,
+              "pipeline_id": 8110638,
+              "color": "#87f2c0",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8110638/statuses/75547438"
+                }
+              }
+            },
+            {
+              "id": 75547442,
+              "name": "подготовка",
+              "sort": 60,
+              "is_editable": true,
+              "pipeline_id": 8110638,
+              "color": "#deff81",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8110638/statuses/75547442"
+                }
+              }
+            },
+            {
+              "id": 66583454,
+              "name": "первичный контакт",
+              "sort": 70,
+              "is_editable": true,
+              "pipeline_id": 8110638,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8110638/statuses/66583454"
+                }
+              }
+            },
+            {
+              "id": 66583410,
+              "name": "целевой",
+              "sort": 80,
+              "is_editable": true,
+              "pipeline_id": 8110638,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8110638/statuses/66583410"
+                }
+              }
+            },
+            {
+              "id": 66583114,
+              "name": "встреча назначена",
+              "sort": 90,
+              "is_editable": true,
+              "pipeline_id": 8110638,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8110638/statuses/66583114"
+                }
+              }
+            },
+            {
+              "id": 66381370,
+              "name": "Встреча проведена",
+              "sort": 100,
+              "is_editable": true,
+              "pipeline_id": 8110638,
+              "color": "#ffff99",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8110638/statuses/66381370"
+                }
+              }
+            },
+            {
+              "id": 66381374,
+              "name": "переговоры",
+              "sort": 110,
+              "is_editable": true,
+              "pipeline_id": 8110638,
+              "color": "#ffcc66",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8110638/statuses/66381374"
+                }
+              }
+            },
+            {
+              "id": 68240254,
+              "name": "отложенный спрос",
+              "sort": 120,
+              "is_editable": true,
+              "pipeline_id": 8110638,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8110638/statuses/68240254"
+                }
+              }
+            },
+            {
+              "id": 66583226,
+              "name": "Договор",
+              "sort": 130,
+              "is_editable": true,
+              "pipeline_id": 8110638,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8110638/statuses/66583226"
+                }
+              }
+            },
+            {
+              "id": 66583230,
+              "name": "1 этап",
+              "sort": 140,
+              "is_editable": true,
+              "pipeline_id": 8110638,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8110638/statuses/66583230"
+                }
+              }
+            },
+            {
+              "id": 66583234,
+              "name": "2 этап",
+              "sort": 150,
+              "is_editable": true,
+              "pipeline_id": 8110638,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8110638/statuses/66583234"
+                }
+              }
+            },
+            {
+              "id": 66583238,
+              "name": "3 этап",
+              "sort": 160,
+              "is_editable": true,
+              "pipeline_id": 8110638,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8110638/statuses/66583238"
+                }
+              }
+            },
+            {
+              "id": 142,
+              "name": "Договор ",
+              "sort": 10000,
+              "is_editable": false,
+              "pipeline_id": 8110638,
+              "color": "#CCFF66",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8110638/statuses/142"
+                }
+              }
+            },
+            {
+              "id": 143,
+              "name": "Closed - lost",
+              "sort": 11000,
+              "is_editable": false,
+              "pipeline_id": 8110638,
+              "color": "#D5D8DB",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8110638/statuses/143"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": 8313538,
+        "name": "Dubai Furnishing",
+        "sort": 14,
+        "is_main": false,
+        "is_unsorted_on": true,
+        "is_archive": false,
+        "account_id": 14277685,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8313538"
+          }
+        },
+        "_embedded": {
+          "statuses": [
+            {
+              "id": 67786194,
+              "name": "Неразобранное",
+              "sort": 10,
+              "is_editable": false,
+              "pipeline_id": 8313538,
+              "color": "#c1c1c1",
+              "type": 1,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8313538/statuses/67786194"
+                }
+              }
+            },
+            {
+              "id": 67786198,
+              "name": "New Leads",
+              "sort": 20,
+              "is_editable": true,
+              "pipeline_id": 8313538,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8313538/statuses/67786198"
+                }
+              }
+            },
+            {
+              "id": 67786202,
+              "name": "Didnt Answer",
+              "sort": 30,
+              "is_editable": true,
+              "pipeline_id": 8313538,
+              "color": "#98cbff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8313538/statuses/67786202"
+                }
+              }
+            },
+            {
+              "id": 67786206,
+              "name": "Target Lead",
+              "sort": 40,
+              "is_editable": true,
+              "pipeline_id": 8313538,
+              "color": "#98cbff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8313538/statuses/67786206"
+                }
+              }
+            },
+            {
+              "id": 67797278,
+              "name": "Later",
+              "sort": 50,
+              "is_editable": true,
+              "pipeline_id": 8313538,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8313538/statuses/67797278"
+                }
+              }
+            },
+            {
+              "id": 67797282,
+              "name": "Meeting",
+              "sort": 60,
+              "is_editable": true,
+              "pipeline_id": 8313538,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8313538/statuses/67797282"
+                }
+              }
+            },
+            {
+              "id": 67797286,
+              "name": "Agreement",
+              "sort": 70,
+              "is_editable": true,
+              "pipeline_id": 8313538,
+              "color": "#ffeab2",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8313538/statuses/67797286"
+                }
+              }
+            },
+            {
+              "id": 142,
+              "name": "Успешно реализовано",
+              "sort": 10000,
+              "is_editable": false,
+              "pipeline_id": 8313538,
+              "color": "#CCFF66",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8313538/statuses/142"
+                }
+              }
+            },
+            {
+              "id": 143,
+              "name": "Закрыто и не реализовано",
+              "sort": 11000,
+              "is_editable": false,
+              "pipeline_id": 8313538,
+              "color": "#D5D8DB",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8313538/statuses/143"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": 6711978,
+        "name": "Catalog",
+        "sort": 15,
+        "is_main": false,
+        "is_unsorted_on": true,
+        "is_archive": true,
+        "account_id": 14277685,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6711978"
+          }
+        },
+        "_embedded": {
+          "statuses": [
+            {
+              "id": 56828994,
+              "name": "Неразобранное",
+              "sort": 10,
+              "is_editable": false,
+              "pipeline_id": 6711978,
+              "color": "#c1c1c1",
+              "type": 1,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6711978/statuses/56828994"
+                }
+              }
+            },
+            {
+              "id": 56828998,
+              "name": "Initial Contact",
+              "sort": 20,
+              "is_editable": true,
+              "pipeline_id": 6711978,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6711978/statuses/56828998"
+                }
+              }
+            },
+            {
+              "id": 56829002,
+              "name": "Offer made",
+              "sort": 30,
+              "is_editable": true,
+              "pipeline_id": 6711978,
+              "color": "#ffff99",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6711978/statuses/56829002"
+                }
+              }
+            },
+            {
+              "id": 56829006,
+              "name": "Negotiation",
+              "sort": 40,
+              "is_editable": true,
+              "pipeline_id": 6711978,
+              "color": "#ffcc66",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6711978/statuses/56829006"
+                }
+              }
+            },
+            {
+              "id": 142,
+              "name": "Closed - won",
+              "sort": 10000,
+              "is_editable": false,
+              "pipeline_id": 6711978,
+              "color": "#CCFF66",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6711978/statuses/142"
+                }
+              }
+            },
+            {
+              "id": 143,
+              "name": "Closed - lost",
+              "sort": 11000,
+              "is_editable": false,
+              "pipeline_id": 6711978,
+              "color": "#D5D8DB",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6711978/statuses/143"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": 6896546,
+        "name": "холодный прозвон по сотрудничеству",
+        "sort": 16,
+        "is_main": false,
+        "is_unsorted_on": true,
+        "is_archive": true,
+        "account_id": 14277685,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6896546"
+          }
+        },
+        "_embedded": {
+          "statuses": [
+            {
+              "id": 58070962,
+              "name": "Неразобранное",
+              "sort": 10,
+              "is_editable": false,
+              "pipeline_id": 6896546,
+              "color": "#c1c1c1",
+              "type": 1,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6896546/statuses/58070962"
+                }
+              }
+            },
+            {
+              "id": 58070966,
+              "name": "Первичный контакт",
+              "sort": 20,
+              "is_editable": true,
+              "pipeline_id": 6896546,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6896546/statuses/58070966"
+                }
+              }
+            },
+            {
+              "id": 58070970,
+              "name": "Переговоры",
+              "sort": 30,
+              "is_editable": true,
+              "pipeline_id": 6896546,
+              "color": "#ffff99",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6896546/statuses/58070970"
+                }
+              }
+            },
+            {
+              "id": 58070974,
+              "name": "Принимают решение",
+              "sort": 40,
+              "is_editable": true,
+              "pipeline_id": 6896546,
+              "color": "#ffcc66",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6896546/statuses/58070974"
+                }
+              }
+            },
+            {
+              "id": 142,
+              "name": "Успешно реализовано",
+              "sort": 10000,
+              "is_editable": false,
+              "pipeline_id": 6896546,
+              "color": "#CCFF66",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6896546/statuses/142"
+                }
+              }
+            },
+            {
+              "id": 143,
+              "name": "Закрыто и не реализовано",
+              "sort": 11000,
+              "is_editable": false,
+              "pipeline_id": 6896546,
+              "color": "#D5D8DB",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6896546/statuses/143"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": 8439654,
+        "name": "Отдел заботы Москва",
+        "sort": 17,
+        "is_main": false,
+        "is_unsorted_on": true,
+        "is_archive": false,
+        "account_id": 14277685,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8439654"
+          }
+        },
+        "_embedded": {
+          "statuses": [
+            {
+              "id": 68665250,
+              "name": "Неразобранное",
+              "sort": 10,
+              "is_editable": false,
+              "pipeline_id": 8439654,
+              "color": "#c1c1c1",
+              "type": 1,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8439654/statuses/68665250"
+                }
+              }
+            },
+            {
+              "id": 68665254,
+              "name": "Стройка",
+              "sort": 20,
+              "is_editable": true,
+              "pipeline_id": 8439654,
+              "color": "#fffeb2",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8439654/statuses/68665254"
+                }
+              }
+            },
+            {
+              "id": 69557558,
+              "name": "НОВЫЕ",
+              "sort": 30,
+              "is_editable": true,
+              "pipeline_id": 8439654,
+              "color": "#fffd7f",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8439654/statuses/69557558"
+                }
+              }
+            },
+            {
+              "id": 68665258,
+              "name": "дизайн 1 ЭТАП",
+              "sort": 40,
+              "is_editable": true,
+              "pipeline_id": 8439654,
+              "color": "#fff000",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8439654/statuses/68665258"
+                }
+              }
+            },
+            {
+              "id": 68665262,
+              "name": "дизайн 2 ЭТАП",
+              "sort": 50,
+              "is_editable": true,
+              "pipeline_id": 8439654,
+              "color": "#ffeab2",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8439654/statuses/68665262"
+                }
+              }
+            },
+            {
+              "id": 68665326,
+              "name": "дИЗАЙН 3 ЭТАП",
+              "sort": 60,
+              "is_editable": true,
+              "pipeline_id": 8439654,
+              "color": "#ffdc7f",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8439654/statuses/68665326"
+                }
+              }
+            },
+            {
+              "id": 68665394,
+              "name": "СТРОЙКА 1 ЭТАП",
+              "sort": 70,
+              "is_editable": true,
+              "pipeline_id": 8439654,
+              "color": "#ffce5a",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8439654/statuses/68665394"
+                }
+              }
+            },
+            {
+              "id": 69687594,
+              "name": "СТРОЙКА 2 ЭТАП",
+              "sort": 80,
+              "is_editable": true,
+              "pipeline_id": 8439654,
+              "color": "#ffdbdb",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8439654/statuses/69687594"
+                }
+              }
+            },
+            {
+              "id": 69687598,
+              "name": "СТРОЙКА 3 ЭТАП",
+              "sort": 90,
+              "is_editable": true,
+              "pipeline_id": 8439654,
+              "color": "#ffc8c8",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8439654/statuses/69687598"
+                }
+              }
+            },
+            {
+              "id": 69687602,
+              "name": "СТРОЙКА 4 ЭТАП",
+              "sort": 100,
+              "is_editable": true,
+              "pipeline_id": 8439654,
+              "color": "#ff8f92",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8439654/statuses/69687602"
+                }
+              }
+            },
+            {
+              "id": 69687606,
+              "name": "Столярка и комплектация",
+              "sort": 110,
+              "is_editable": true,
+              "pipeline_id": 8439654,
+              "color": "#d6eaff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8439654/statuses/69687606"
+                }
+              }
+            },
+            {
+              "id": 69687610,
+              "name": "Спустя 3 месяца по окончанию стройки",
+              "sort": 120,
+              "is_editable": true,
+              "pipeline_id": 8439654,
+              "color": "#c1e0ff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8439654/statuses/69687610"
+                }
+              }
+            },
+            {
+              "id": 69687614,
+              "name": "Спустя 6 месяцев по окончанию стройки",
+              "sort": 130,
+              "is_editable": true,
+              "pipeline_id": 8439654,
+              "color": "#98cbff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8439654/statuses/69687614"
+                }
+              }
+            },
+            {
+              "id": 69686874,
+              "name": "Спустя 12 месяцев по окончанию стройки",
+              "sort": 140,
+              "is_editable": true,
+              "pipeline_id": 8439654,
+              "color": "#deff81",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8439654/statuses/69686874"
+                }
+              }
+            },
+            {
+              "id": 69687618,
+              "name": "УСПЕШНО РЕАЛИЗОВАНО",
+              "sort": 150,
+              "is_editable": true,
+              "pipeline_id": 8439654,
+              "color": "#ebffb1",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8439654/statuses/69687618"
+                }
+              }
+            },
+            {
+              "id": 69749290,
+              "name": "ПРИОСТАНОВЛЕНО",
+              "sort": 160,
+              "is_editable": true,
+              "pipeline_id": 8439654,
+              "color": "#eb93ff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8439654/statuses/69749290"
+                }
+              }
+            },
+            {
+              "id": 142,
+              "name": "ЗАКРЫТО И НЕРЕАЛИЗОВАНО",
+              "sort": 10000,
+              "is_editable": false,
+              "pipeline_id": 8439654,
+              "color": "#CCFF66",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8439654/statuses/142"
+                }
+              }
+            },
+            {
+              "id": 143,
+              "name": "АРХИВ",
+              "sort": 11000,
+              "is_editable": false,
+              "pipeline_id": 8439654,
+              "color": "#D5D8DB",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/8439654/statuses/143"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": 6922642,
+        "name": "Рассылки",
+        "sort": 18,
+        "is_main": false,
+        "is_unsorted_on": true,
+        "is_archive": true,
+        "account_id": 14277685,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6922642"
+          }
+        },
+        "_embedded": {
+          "statuses": [
+            {
+              "id": 58247146,
+              "name": "Неразобранное",
+              "sort": 10,
+              "is_editable": false,
+              "pipeline_id": 6922642,
+              "color": "#c1c1c1",
+              "type": 1,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6922642/statuses/58247146"
+                }
+              }
+            },
+            {
+              "id": 58247150,
+              "name": "Все клиенты",
+              "sort": 20,
+              "is_editable": true,
+              "pipeline_id": 6922642,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6922642/statuses/58247150"
+                }
+              }
+            },
+            {
+              "id": 58247154,
+              "name": "есть диалог",
+              "sort": 30,
+              "is_editable": true,
+              "pipeline_id": 6922642,
+              "color": "#ffff99",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6922642/statuses/58247154"
+                }
+              }
+            },
+            {
+              "id": 58247158,
+              "name": "очередь на рассылку",
+              "sort": 40,
+              "is_editable": true,
+              "pipeline_id": 6922642,
+              "color": "#ffcc66",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6922642/statuses/58247158"
+                }
+              }
+            },
+            {
+              "id": 58247162,
+              "name": "рассылка - whatsapp",
+              "sort": 50,
+              "is_editable": true,
+              "pipeline_id": 6922642,
+              "color": "#99ccff",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6922642/statuses/58247162"
+                }
+              }
+            },
+            {
+              "id": 142,
+              "name": "Успешно реализовано",
+              "sort": 10000,
+              "is_editable": false,
+              "pipeline_id": 6922642,
+              "color": "#CCFF66",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6922642/statuses/142"
+                }
+              }
+            },
+            {
+              "id": 143,
+              "name": "Закрыто и не реализовано",
+              "sort": 11000,
+              "is_editable": false,
+              "pipeline_id": 6922642,
+              "color": "#D5D8DB",
+              "type": 0,
+              "account_id": 14277685,
+              "_links": {
+                "self": {
+                  "href": "https://balcon.amocrm.ru/api/v4/leads/pipelines/6922642/statuses/143"
                 }
               }
             }

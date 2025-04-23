@@ -1,27 +1,32 @@
 {
-  "_total_items": 19,
+  "_total_items": 127,
   "_page": 1,
   "_page_count": 1,
   "_links": {
     "self": {
-      "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields?page=1&limit=250"
+      "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields?page=1&limit=250"
     }
   },
   "_embedded": {
     "custom_fields": [
       {
-        "id": 946607,
-        "name": "utm_content",
-        "type": "tracking_data",
-        "account_id": 32363618,
-        "code": "UTM_CONTENT",
-        "sort": 12,
-        "is_api_only": true,
+        "id": 593839,
+        "name": "Price / m2",
+        "type": "text",
+        "account_id": 14277685,
+        "code": "",
+        "sort": 526,
+        "is_api_only": false,
         "enums": null,
-        "group_id": "statistic",
-        "required_statuses": [],
-        "is_deletable": false,
-        "is_predefined": true,
+        "group_id": null,
+        "required_statuses": [
+          {
+            "pipeline_id": 2194891,
+            "status_id": 30848467
+          }
+        ],
+        "is_deletable": true,
+        "is_predefined": false,
         "entity_type": "leads",
         "tracking_callback": null,
         "remind": null,
@@ -31,23 +36,28 @@
         "chained_lists": null,
         "_links": {
           "self": {
-            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946607?page=1&limit=250"
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/593839?page=1&limit=250"
           }
         }
       },
       {
-        "id": 946609,
-        "name": "utm_medium",
-        "type": "tracking_data",
-        "account_id": 32363618,
-        "code": "UTM_MEDIUM",
-        "sort": 14,
-        "is_api_only": true,
+        "id": 612209,
+        "name": "Size",
+        "type": "numeric",
+        "account_id": 14277685,
+        "code": "",
+        "sort": 525,
+        "is_api_only": false,
         "enums": null,
-        "group_id": "statistic",
-        "required_statuses": [],
-        "is_deletable": false,
-        "is_predefined": true,
+        "group_id": null,
+        "required_statuses": [
+          {
+            "pipeline_id": 2199247,
+            "status_id": 37399807
+          }
+        ],
+        "is_deletable": true,
+        "is_predefined": false,
         "entity_type": "leads",
         "tracking_callback": null,
         "remind": null,
@@ -57,23 +67,23 @@
         "chained_lists": null,
         "_links": {
           "self": {
-            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946609?page=1&limit=250"
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/612209?page=1&limit=250"
           }
         }
       },
       {
-        "id": 946611,
-        "name": "utm_campaign",
-        "type": "tracking_data",
-        "account_id": 32363618,
-        "code": "UTM_CAMPAIGN",
-        "sort": 16,
-        "is_api_only": true,
+        "id": 665685,
+        "name": "Расчет сроков",
+        "type": "url",
+        "account_id": 14277685,
+        "code": "",
+        "sort": 542,
+        "is_api_only": false,
         "enums": null,
-        "group_id": "statistic",
+        "group_id": null,
         "required_statuses": [],
-        "is_deletable": false,
-        "is_predefined": true,
+        "is_deletable": true,
+        "is_predefined": false,
         "entity_type": "leads",
         "tracking_callback": null,
         "remind": null,
@@ -83,17 +93,17 @@
         "chained_lists": null,
         "_links": {
           "self": {
-            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946611?page=1&limit=250"
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/665685?page=1&limit=250"
           }
         }
       },
       {
-        "id": 946613,
+        "id": 668215,
         "name": "utm_source",
         "type": "tracking_data",
-        "account_id": 32363618,
+        "account_id": 14277685,
         "code": "UTM_SOURCE",
-        "sort": 18,
+        "sort": 634,
         "is_api_only": true,
         "enums": null,
         "group_id": "statistic",
@@ -109,17 +119,69 @@
         "chained_lists": null,
         "_links": {
           "self": {
-            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946613?page=1&limit=250"
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/668215?page=1&limit=250"
           }
         }
       },
       {
-        "id": 946615,
+        "id": 668217,
+        "name": "utm_medium",
+        "type": "tracking_data",
+        "account_id": 14277685,
+        "code": "UTM_MEDIUM",
+        "sort": 633,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": "statistic",
+        "required_statuses": [],
+        "is_deletable": false,
+        "is_predefined": true,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/668217?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 668219,
+        "name": "utm_campaign",
+        "type": "tracking_data",
+        "account_id": 14277685,
+        "code": "UTM_CAMPAIGN",
+        "sort": 632,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": "statistic",
+        "required_statuses": [],
+        "is_deletable": false,
+        "is_predefined": true,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/668219?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 668221,
         "name": "utm_term",
         "type": "tracking_data",
-        "account_id": 32363618,
+        "account_id": 14277685,
         "code": "UTM_TERM",
-        "sort": 20,
+        "sort": 635,
         "is_api_only": true,
         "enums": null,
         "group_id": "statistic",
@@ -135,17 +197,43 @@
         "chained_lists": null,
         "_links": {
           "self": {
-            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946615?page=1&limit=250"
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/668221?page=1&limit=250"
           }
         }
       },
       {
-        "id": 946617,
+        "id": 668223,
+        "name": "utm_content",
+        "type": "tracking_data",
+        "account_id": 14277685,
+        "code": "UTM_CONTENT",
+        "sort": 631,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": "statistic",
+        "required_statuses": [],
+        "is_deletable": false,
+        "is_predefined": true,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/668223?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 668225,
         "name": "utm_referrer",
         "type": "tracking_data",
-        "account_id": 32363618,
+        "account_id": 14277685,
         "code": "UTM_REFERRER",
-        "sort": 22,
+        "sort": 630,
         "is_api_only": true,
         "enums": null,
         "group_id": "statistic",
@@ -161,225 +249,17 @@
         "chained_lists": null,
         "_links": {
           "self": {
-            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946617?page=1&limit=250"
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/668225?page=1&limit=250"
           }
         }
       },
       {
-        "id": 946619,
-        "name": "roistat",
-        "type": "tracking_data",
-        "account_id": 32363618,
-        "code": "ROISTAT",
-        "sort": 24,
-        "is_api_only": true,
-        "enums": null,
-        "group_id": "statistic",
-        "required_statuses": [],
-        "is_deletable": false,
-        "is_predefined": true,
-        "entity_type": "leads",
-        "tracking_callback": null,
-        "remind": null,
-        "triggers": [],
-        "currency": null,
-        "hidden_statuses": [],
-        "chained_lists": null,
-        "_links": {
-          "self": {
-            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946619?page=1&limit=250"
-          }
-        }
-      },
-      {
-        "id": 946621,
-        "name": "referrer",
-        "type": "tracking_data",
-        "account_id": 32363618,
-        "code": "REFERRER",
-        "sort": 26,
-        "is_api_only": true,
-        "enums": null,
-        "group_id": "statistic",
-        "required_statuses": [],
-        "is_deletable": false,
-        "is_predefined": true,
-        "entity_type": "leads",
-        "tracking_callback": null,
-        "remind": null,
-        "triggers": [],
-        "currency": null,
-        "hidden_statuses": [],
-        "chained_lists": null,
-        "_links": {
-          "self": {
-            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946621?page=1&limit=250"
-          }
-        }
-      },
-      {
-        "id": 946623,
-        "name": "openstat_service",
-        "type": "tracking_data",
-        "account_id": 32363618,
-        "code": "OPENSTAT_SERVICE",
-        "sort": 28,
-        "is_api_only": true,
-        "enums": null,
-        "group_id": "statistic",
-        "required_statuses": [],
-        "is_deletable": false,
-        "is_predefined": true,
-        "entity_type": "leads",
-        "tracking_callback": null,
-        "remind": null,
-        "triggers": [],
-        "currency": null,
-        "hidden_statuses": [],
-        "chained_lists": null,
-        "_links": {
-          "self": {
-            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946623?page=1&limit=250"
-          }
-        }
-      },
-      {
-        "id": 946625,
-        "name": "openstat_campaign",
-        "type": "tracking_data",
-        "account_id": 32363618,
-        "code": "OPENSTAT_CAMPAIGN",
-        "sort": 30,
-        "is_api_only": true,
-        "enums": null,
-        "group_id": "statistic",
-        "required_statuses": [],
-        "is_deletable": false,
-        "is_predefined": true,
-        "entity_type": "leads",
-        "tracking_callback": null,
-        "remind": null,
-        "triggers": [],
-        "currency": null,
-        "hidden_statuses": [],
-        "chained_lists": null,
-        "_links": {
-          "self": {
-            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946625?page=1&limit=250"
-          }
-        }
-      },
-      {
-        "id": 946627,
-        "name": "openstat_ad",
-        "type": "tracking_data",
-        "account_id": 32363618,
-        "code": "OPENSTAT_AD",
-        "sort": 32,
-        "is_api_only": true,
-        "enums": null,
-        "group_id": "statistic",
-        "required_statuses": [],
-        "is_deletable": false,
-        "is_predefined": true,
-        "entity_type": "leads",
-        "tracking_callback": null,
-        "remind": null,
-        "triggers": [],
-        "currency": null,
-        "hidden_statuses": [],
-        "chained_lists": null,
-        "_links": {
-          "self": {
-            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946627?page=1&limit=250"
-          }
-        }
-      },
-      {
-        "id": 946629,
-        "name": "openstat_source",
-        "type": "tracking_data",
-        "account_id": 32363618,
-        "code": "OPENSTAT_SOURCE",
-        "sort": 34,
-        "is_api_only": true,
-        "enums": null,
-        "group_id": "statistic",
-        "required_statuses": [],
-        "is_deletable": false,
-        "is_predefined": true,
-        "entity_type": "leads",
-        "tracking_callback": null,
-        "remind": null,
-        "triggers": [],
-        "currency": null,
-        "hidden_statuses": [],
-        "chained_lists": null,
-        "_links": {
-          "self": {
-            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946629?page=1&limit=250"
-          }
-        }
-      },
-      {
-        "id": 946631,
-        "name": "from",
-        "type": "tracking_data",
-        "account_id": 32363618,
-        "code": "FROM",
-        "sort": 36,
-        "is_api_only": true,
-        "enums": null,
-        "group_id": "statistic",
-        "required_statuses": [],
-        "is_deletable": false,
-        "is_predefined": true,
-        "entity_type": "leads",
-        "tracking_callback": null,
-        "remind": null,
-        "triggers": [],
-        "currency": null,
-        "hidden_statuses": [],
-        "chained_lists": null,
-        "_links": {
-          "self": {
-            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946631?page=1&limit=250"
-          }
-        }
-      },
-      {
-        "id": 946633,
-        "name": "gclientid",
-        "type": "tracking_data",
-        "account_id": 32363618,
-        "code": "GCLIENTID",
-        "sort": 38,
-        "is_api_only": true,
-        "enums": null,
-        "group_id": "statistic",
-        "required_statuses": [],
-        "is_deletable": false,
-        "is_predefined": true,
-        "entity_type": "leads",
-        "tracking_callback": null,
-        "remind": null,
-        "triggers": [],
-        "currency": null,
-        "hidden_statuses": [],
-        "chained_lists": null,
-        "_links": {
-          "self": {
-            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946633?page=1&limit=250"
-          }
-        }
-      },
-      {
-        "id": 946635,
+        "id": 668227,
         "name": "_ym_uid",
         "type": "tracking_data",
-        "account_id": 32363618,
+        "account_id": 14277685,
         "code": "_YM_UID",
-        "sort": 40,
+        "sort": 618,
         "is_api_only": true,
         "enums": null,
         "group_id": "statistic",
@@ -395,17 +275,17 @@
         "chained_lists": null,
         "_links": {
           "self": {
-            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946635?page=1&limit=250"
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/668227?page=1&limit=250"
           }
         }
       },
       {
-        "id": 946637,
+        "id": 668229,
         "name": "_ym_counter",
         "type": "tracking_data",
-        "account_id": 32363618,
+        "account_id": 14277685,
         "code": "_YM_COUNTER",
-        "sort": 42,
+        "sort": 617,
         "is_api_only": true,
         "enums": null,
         "group_id": "statistic",
@@ -421,17 +301,225 @@
         "chained_lists": null,
         "_links": {
           "self": {
-            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946637?page=1&limit=250"
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/668229?page=1&limit=250"
           }
         }
       },
       {
-        "id": 946639,
+        "id": 668231,
+        "name": "roistat",
+        "type": "tracking_data",
+        "account_id": 14277685,
+        "code": "ROISTAT",
+        "sort": 619,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": "statistic",
+        "required_statuses": [],
+        "is_deletable": false,
+        "is_predefined": true,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/668231?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 668233,
+        "name": "referrer",
+        "type": "tracking_data",
+        "account_id": 14277685,
+        "code": "REFERRER",
+        "sort": 620,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": "statistic",
+        "required_statuses": [],
+        "is_deletable": false,
+        "is_predefined": true,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/668233?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 668235,
+        "name": "openstat_service",
+        "type": "tracking_data",
+        "account_id": 14277685,
+        "code": "OPENSTAT_SERVICE",
+        "sort": 621,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": "statistic",
+        "required_statuses": [],
+        "is_deletable": false,
+        "is_predefined": true,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/668235?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 668237,
+        "name": "openstat_campaign",
+        "type": "tracking_data",
+        "account_id": 14277685,
+        "code": "OPENSTAT_CAMPAIGN",
+        "sort": 629,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": "statistic",
+        "required_statuses": [],
+        "is_deletable": false,
+        "is_predefined": true,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/668237?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 668239,
+        "name": "openstat_ad",
+        "type": "tracking_data",
+        "account_id": 14277685,
+        "code": "OPENSTAT_AD",
+        "sort": 622,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": "statistic",
+        "required_statuses": [],
+        "is_deletable": false,
+        "is_predefined": true,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/668239?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 668241,
+        "name": "openstat_source",
+        "type": "tracking_data",
+        "account_id": 14277685,
+        "code": "OPENSTAT_SOURCE",
+        "sort": 623,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": "statistic",
+        "required_statuses": [],
+        "is_deletable": false,
+        "is_predefined": true,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/668241?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 668243,
+        "name": "from",
+        "type": "tracking_data",
+        "account_id": 14277685,
+        "code": "FROM",
+        "sort": 624,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": "statistic",
+        "required_statuses": [],
+        "is_deletable": false,
+        "is_predefined": true,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/668243?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 668245,
+        "name": "gclientid",
+        "type": "tracking_data",
+        "account_id": 14277685,
+        "code": "GCLIENTID",
+        "sort": 625,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": "statistic",
+        "required_statuses": [],
+        "is_deletable": false,
+        "is_predefined": true,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/668245?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 668247,
         "name": "gclid",
         "type": "tracking_data",
-        "account_id": 32363618,
+        "account_id": 14277685,
         "code": "GCLID",
-        "sort": 44,
+        "sort": 626,
         "is_api_only": true,
         "enums": null,
         "group_id": "statistic",
@@ -447,17 +535,17 @@
         "chained_lists": null,
         "_links": {
           "self": {
-            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946639?page=1&limit=250"
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/668247?page=1&limit=250"
           }
         }
       },
       {
-        "id": 946641,
+        "id": 668249,
         "name": "yclid",
         "type": "tracking_data",
-        "account_id": 32363618,
+        "account_id": 14277685,
         "code": "YCLID",
-        "sort": 46,
+        "sort": 627,
         "is_api_only": true,
         "enums": null,
         "group_id": "statistic",
@@ -473,17 +561,17 @@
         "chained_lists": null,
         "_links": {
           "self": {
-            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946641?page=1&limit=250"
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/668249?page=1&limit=250"
           }
         }
       },
       {
-        "id": 946643,
+        "id": 668251,
         "name": "fbclid",
         "type": "tracking_data",
-        "account_id": 32363618,
+        "account_id": 14277685,
         "code": "FBCLID",
-        "sort": 48,
+        "sort": 628,
         "is_api_only": true,
         "enums": null,
         "group_id": "statistic",
@@ -499,7 +587,3485 @@
         "chained_lists": null,
         "_links": {
           "self": {
-            "href": "https://jukov9999.amocrm.ru/api/v4/leads/custom_fields/946643?page=1&limit=250"
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/668251?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 681458,
+        "name": "Type of property",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 541,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [
+          {
+            "pipeline_id": 1930285,
+            "status_id": 29182444
+          }
+        ],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/681458?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 682765,
+        "name": "КП",
+        "type": "url",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 543,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/682765?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 683899,
+        "name": "Location",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 523,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/683899?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 684099,
+        "name": "Style",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 537,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/684099?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 684111,
+        "name": "Area",
+        "type": "textarea",
+        "account_id": 14277685,
+        "code": "AREA",
+        "sort": 538,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/684111?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 684749,
+        "name": "Номер линии билайн:",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 540,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/684749?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 684751,
+        "name": "TRANID",
+        "type": "textarea",
+        "account_id": 14277685,
+        "code": "TRANID",
+        "sort": 539,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/684751?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 685131,
+        "name": "Contract type",
+        "type": "multiselect",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 522,
+        "is_api_only": false,
+        "enums": [
+          {
+            "id": 1304557,
+            "value": "full",
+            "sort": 500
+          },
+          {
+            "id": 1304559,
+            "value": "partial",
+            "sort": 1
+          }
+        ],
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/685131?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 685799,
+        "name": "Language",
+        "type": "select",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 530,
+        "is_api_only": false,
+        "enums": [
+          {
+            "id": 1304991,
+            "value": "Russian",
+            "sort": 500
+          },
+          {
+            "id": 1304993,
+            "value": "English",
+            "sort": 1
+          },
+          {
+            "id": 1310093,
+            "value": "Arabic",
+            "sort": 2
+          },
+          {
+            "id": 1310095,
+            "value": "Hindi",
+            "sort": 3
+          }
+        ],
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/685799?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 685829,
+        "name": "Номер линии билайн:",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 521,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/685829?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 686477,
+        "name": "ЖК или адрес объекта",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 544,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/686477?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 686479,
+        "name": "Площадь помещения",
+        "type": "numeric",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 547,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/686479?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 686485,
+        "name": "Какой бюджет закладываете? (если нет ориентируем на реализацию от 200 до 250 т.р за квадрат, КАК ВАМ ЦЕНА?)",
+        "type": "numeric",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 559,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/686485?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 686487,
+        "name": "Состояние объекта (бетон, Вайт-бокс, вторичка, готовая отделка)?",
+        "type": "select",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 548,
+        "is_api_only": false,
+        "enums": [
+          {
+            "id": 1306507,
+            "value": "Бетон",
+            "sort": 500
+          },
+          {
+            "id": 1306509,
+            "value": "Вайт-бокс",
+            "sort": 1
+          },
+          {
+            "id": 1306511,
+            "value": "Вторичка",
+            "sort": 2
+          },
+          {
+            "id": 1306513,
+            "value": "Готовая отделка",
+            "sort": 3
+          },
+          {
+            "id": 1306569,
+            "value": "Черновая отделка",
+            "sort": 4
+          }
+        ],
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/686487?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 687329,
+        "name": "Сообщение",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 558,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/687329?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 687331,
+        "name": "Тип трафика",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 560,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/687331?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 687333,
+        "name": "Ключевое слово-фраза",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 561,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/687333?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 687335,
+        "name": "Стиль/каталога",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 562,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/687335?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 687337,
+        "name": "Какой объект",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 563,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/687337?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 687339,
+        "name": "Тип объекта",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 564,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/687339?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 687345,
+        "name": "banner_id",
+        "type": "tracking_data",
+        "account_id": 14277685,
+        "code": "BANNER_ID",
+        "sort": 636,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": "statistic",
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/687345?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 687347,
+        "name": "Источник",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 565,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/687347?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 687349,
+        "name": "Не менять ответственного",
+        "type": "checkbox",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 520,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/687349?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 687353,
+        "name": "1_otvetstvenniy",
+        "type": "multiselect",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 557,
+        "is_api_only": false,
+        "enums": [
+          {
+            "id": 1308185,
+            "value": "Ирина Соколова",
+            "sort": 500
+          },
+          {
+            "id": 1308187,
+            "value": "Альбина Кравченко",
+            "sort": 1
+          },
+          {
+            "id": 1308189,
+            "value": "Мария Маркова",
+            "sort": 2
+          },
+          {
+            "id": 1308191,
+            "value": "Анна Бондаренко",
+            "sort": 3
+          }
+        ],
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/687353?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 687377,
+        "name": "roistat",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 566,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/687377?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 687379,
+        "name": "Комментарий",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 567,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/687379?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 687385,
+        "name": "Актуальность ДП",
+        "type": "multiselect",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 549,
+        "is_api_only": false,
+        "enums": [
+          {
+            "id": 1308239,
+            "value": "Да",
+            "sort": 500
+          },
+          {
+            "id": 1308241,
+            "value": "Нет",
+            "sort": 1
+          }
+        ],
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/687385?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 687387,
+        "name": "Рассматриваете капитальные работы?",
+        "type": "multiselect",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 545,
+        "is_api_only": false,
+        "enums": [
+          {
+            "id": 1308243,
+            "value": "Да",
+            "sort": 500
+          },
+          {
+            "id": 1308245,
+            "value": "Нет",
+            "sort": 1
+          },
+          {
+            "id": 1308247,
+            "value": "Возможно",
+            "sort": 2
+          }
+        ],
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/687387?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 687389,
+        "name": "Есть ли доступ на объект?",
+        "type": "multiselect",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 546,
+        "is_api_only": false,
+        "enums": [
+          {
+            "id": 1308249,
+            "value": "Да",
+            "sort": 500
+          },
+          {
+            "id": 1308251,
+            "value": "Нет",
+            "sort": 1
+          },
+          {
+            "id": 1308331,
+            "value": "3-6 Месяцев",
+            "sort": 2
+          },
+          {
+            "id": 1308333,
+            "value": "6+ Месяцев",
+            "sort": 3
+          }
+        ],
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/687389?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 687451,
+        "name": "Заполнены поля ?",
+        "type": "select",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 556,
+        "is_api_only": false,
+        "enums": [
+          {
+            "id": 1308447,
+            "value": "Да",
+            "sort": 500
+          },
+          {
+            "id": 1308449,
+            "value": "Нет",
+            "sort": 1
+          }
+        ],
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/687451?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 687595,
+        "name": "ID сайта в Calltouch",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 511,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/687595?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 687597,
+        "name": "ID звонка в Calltouch",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 518,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/687597?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 687599,
+        "name": "ID заявки в Calltouch",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 517,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/687599?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 687601,
+        "name": "ID чата в Calltouch",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 516,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/687601?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 687603,
+        "name": "Источник (utm_source)",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 515,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/687603?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 687605,
+        "name": "Канал (utm_medium)",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 514,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/687605?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 687607,
+        "name": "Кампания (utm_campaign)",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 513,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/687607?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 687609,
+        "name": "Объявление (utm_content)",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 506,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/687609?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 687611,
+        "name": "Ключевое слово (utm_term)",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 519,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/687611?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 687671,
+        "name": "CONVENIENT_TIME_TO_CALL",
+        "type": "textarea",
+        "account_id": 14277685,
+        "code": "CONVENIENT_TIME_TO_CALL",
+        "sort": 512,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/687671?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 687673,
+        "name": "FORMNAME",
+        "type": "textarea",
+        "account_id": 14277685,
+        "code": "FORMNAME",
+        "sort": 510,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/687673?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 687675,
+        "name": "FORMID",
+        "type": "textarea",
+        "account_id": 14277685,
+        "code": "FORMID",
+        "sort": 509,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/687675?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 687677,
+        "name": "COOKIES",
+        "type": "textarea",
+        "account_id": 14277685,
+        "code": "COOKIES",
+        "sort": 508,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/687677?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 687679,
+        "name": "REFERER",
+        "type": "url",
+        "account_id": 14277685,
+        "code": "REFERER",
+        "sort": 507,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/687679?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 687875,
+        "name": "Данные визита",
+        "type": "textarea",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 505,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/687875?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688013,
+        "name": "Был звонок",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 568,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688013?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688025,
+        "name": "What budget are you considering for furnishing your apartment or residence?",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 569,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688025?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688041,
+        "name": "Дизайн",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 570,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688041?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688043,
+        "name": "В каком стиле вы хотите интерьер?",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 571,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688043?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688045,
+        "name": "Когда вы хотите начать дизайн-проект?",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 572,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688045?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688047,
+        "name": "Что для вас важно в дизайне?",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 573,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688047?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688213,
+        "name": "Данные визита",
+        "type": "textarea",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 501,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688213?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688215,
+        "name": "Данные визита",
+        "type": "textarea",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 502,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688215?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688217,
+        "name": "Данные визита",
+        "type": "textarea",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 503,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688217?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688219,
+        "name": "Данные визита",
+        "type": "textarea",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 504,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688219?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688263,
+        "name": "n_other_leads",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 615,
+        "is_api_only": true,
+        "enums": null,
+        "group_id": "leads_37811721987796",
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688263?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688461,
+        "name": "Дата подписания",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 574,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688461?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688463,
+        "name": "Дизайнер",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 575,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688463?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688465,
+        "name": "Продавец",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 576,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688465?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688467,
+        "name": "Выполняли ли ремонтные работы ?",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 577,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688467?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688469,
+        "name": "Выполняли ли комлпектацию объекта ?",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 578,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688469?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688471,
+        "name": "Дата полной сдачи объекта",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 579,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688471?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688473,
+        "name": "Бюджет клиента",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 580,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688473?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688475,
+        "name": "Повторное обращение/рекомендация",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 581,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688475?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688477,
+        "name": "Отношение с клиентом",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 582,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688477?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688479,
+        "name": "Категория клиента",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 583,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688479?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688481,
+        "name": "Семейное положение",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 584,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688481?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688483,
+        "name": "Возраст",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 585,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688483?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688485,
+        "name": "Дети",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 586,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688485?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688487,
+        "name": "Работа",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 587,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688487?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688489,
+        "name": "Увлечения",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 588,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688489?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688511,
+        "name": "Дизайн 1 этап",
+        "type": "date",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 589,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [
+          29683875
+        ],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688511?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688513,
+        "name": "Дизайн 2 этап",
+        "type": "date",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 590,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [
+          29683877
+        ],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688513?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688515,
+        "name": "Дизайн 3 этап",
+        "type": "date",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 591,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [
+          29683879
+        ],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688515?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688517,
+        "name": "Стройка 1 этап",
+        "type": "date",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 592,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [
+          29683881
+        ],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688517?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688519,
+        "name": "Стройка 2 этап",
+        "type": "date",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 593,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [
+          29683883
+        ],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688519?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688521,
+        "name": "Стройка 3 этап",
+        "type": "date",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 594,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [
+          29683885
+        ],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688521?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688523,
+        "name": "Стройка 4 этап",
+        "type": "date",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 595,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [
+          29683887
+        ],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688523?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688527,
+        "name": "Столярка и комплектация",
+        "type": "date",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 596,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [
+          29683889
+        ],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688527?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688539,
+        "name": "Спустя 3 месяца",
+        "type": "date",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 597,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [
+          29698729
+        ],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688539?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688541,
+        "name": "Спустя 6 месяцев",
+        "type": "date",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 598,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [
+          29698731
+        ],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688541?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 688543,
+        "name": "Спустя 12 месяцев",
+        "type": "date",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 599,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [
+          29698733
+        ],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/688543?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 689239,
+        "name": "Гипотеза",
+        "type": "multiselect",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 610,
+        "is_api_only": false,
+        "enums": [
+          {
+            "id": 1310071,
+            "value": "Ноябрь Список Дорого",
+            "sort": 500
+          }
+        ],
+        "group_id": "leads_4121721728922",
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/689239?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 689245,
+        "name": "Type of property",
+        "type": "multiselect",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 531,
+        "is_api_only": false,
+        "enums": [
+          {
+            "id": 1310077,
+            "value": "Сommercial",
+            "sort": 500
+          },
+          {
+            "id": 1310079,
+            "value": "Private",
+            "sort": 1
+          }
+        ],
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/689245?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 689247,
+        "name": "SQFT / SQM",
+        "type": "multiselect",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 532,
+        "is_api_only": false,
+        "enums": [
+          {
+            "id": 1310081,
+            "value": "SQFT",
+            "sort": 500
+          },
+          {
+            "id": 1310083,
+            "value": "SQM",
+            "sort": 1
+          }
+        ],
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/689247?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 689249,
+        "name": "AREA",
+        "type": "numeric",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 533,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/689249?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 689251,
+        "name": "Meeting place",
+        "type": "multiselect",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 534,
+        "is_api_only": false,
+        "enums": [
+          {
+            "id": 1310085,
+            "value": "Online",
+            "sort": 500
+          },
+          {
+            "id": 1310087,
+            "value": "Onsite",
+            "sort": 1
+          },
+          {
+            "id": 1310089,
+            "value": "Office",
+            "sort": 2
+          },
+          {
+            "id": 1310091,
+            "value": "Opus",
+            "sort": 3
+          }
+        ],
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/689251?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 689273,
+        "name": "1_Responsible",
+        "type": "multiselect",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 535,
+        "is_api_only": false,
+        "enums": [
+          {
+            "id": 1310139,
+            "value": "Наталья Бенедикта",
+            "sort": 500
+          },
+          {
+            "id": 1310141,
+            "value": "Ali",
+            "sort": 1
+          },
+          {
+            "id": 1310407,
+            "value": "Рахель",
+            "sort": 2
+          }
+        ],
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/689273?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 689381,
+        "name": "Potential",
+        "type": "checkbox",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 536,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/689381?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 689383,
+        "name": "Доступ",
+        "type": "select",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 552,
+        "is_api_only": false,
+        "enums": [
+          {
+            "id": 1310297,
+            "value": "1-Квартал 2025 года",
+            "sort": 1
+          },
+          {
+            "id": 1310299,
+            "value": "2-Квартал 2025 года",
+            "sort": 2
+          },
+          {
+            "id": 1310301,
+            "value": "3-Квартал 2025 года",
+            "sort": 3
+          },
+          {
+            "id": 1310303,
+            "value": "4-Квартал 2025 года",
+            "sort": 4
+          },
+          {
+            "id": 1310669,
+            "value": "1-Квартал 2026 года",
+            "sort": 5
+          },
+          {
+            "id": 1310671,
+            "value": "2-Квартал 2026 года",
+            "sort": 6
+          },
+          {
+            "id": 1310673,
+            "value": "3-Квартал 2026 года",
+            "sort": 7
+          },
+          {
+            "id": 1310675,
+            "value": "4-Квартал 2026 года",
+            "sort": 8
+          },
+          {
+            "id": 1310721,
+            "value": "Уже есть доступ",
+            "sort": 500
+          }
+        ],
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/689383?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 689475,
+        "name": "Цена за кВ м²",
+        "type": "numeric",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 550,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/689475?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 689567,
+        "name": "Регион",
+        "type": "select",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 551,
+        "is_api_only": false,
+        "enums": [
+          {
+            "id": 1310491,
+            "value": "Москва",
+            "sort": 500
+          },
+          {
+            "id": 1310493,
+            "value": "Московская область",
+            "sort": 1
+          },
+          {
+            "id": 1310495,
+            "value": "Санкт-Петербург",
+            "sort": 2
+          },
+          {
+            "id": 1310497,
+            "value": "Сочи",
+            "sort": 3
+          },
+          {
+            "id": 1310499,
+            "value": "Севастополь/Крым",
+            "sort": 4
+          },
+          {
+            "id": 1310501,
+            "value": "Алтайский край",
+            "sort": 5
+          },
+          {
+            "id": 1310503,
+            "value": "Амурская область",
+            "sort": 6
+          },
+          {
+            "id": 1310505,
+            "value": "Архангельская область",
+            "sort": 7
+          },
+          {
+            "id": 1310507,
+            "value": "Астраханская область",
+            "sort": 8
+          },
+          {
+            "id": 1310509,
+            "value": "Белгородская область",
+            "sort": 9
+          },
+          {
+            "id": 1310511,
+            "value": "Брянская область",
+            "sort": 10
+          },
+          {
+            "id": 1310513,
+            "value": "Владимирская область",
+            "sort": 11
+          },
+          {
+            "id": 1310515,
+            "value": "Волгоградская область",
+            "sort": 12
+          },
+          {
+            "id": 1310517,
+            "value": "Вологодская область",
+            "sort": 13
+          },
+          {
+            "id": 1310519,
+            "value": "Воронежская область",
+            "sort": 14
+          },
+          {
+            "id": 1310521,
+            "value": "Донецкая Народная Республика",
+            "sort": 15
+          },
+          {
+            "id": 1310523,
+            "value": "Еврейская АО",
+            "sort": 16
+          },
+          {
+            "id": 1310525,
+            "value": "Забайкальский край",
+            "sort": 17
+          },
+          {
+            "id": 1310527,
+            "value": "Запорожская область",
+            "sort": 18
+          },
+          {
+            "id": 1310529,
+            "value": "Ивановская область",
+            "sort": 19
+          },
+          {
+            "id": 1310531,
+            "value": "Иркутская область",
+            "sort": 20
+          },
+          {
+            "id": 1310533,
+            "value": "Кабардино-Балкарская Республика",
+            "sort": 21
+          },
+          {
+            "id": 1310535,
+            "value": "Калининградская область",
+            "sort": 22
+          },
+          {
+            "id": 1310537,
+            "value": "Калужская область",
+            "sort": 23
+          },
+          {
+            "id": 1310539,
+            "value": "Камчатский край",
+            "sort": 24
+          },
+          {
+            "id": 1310541,
+            "value": "Карачаево-Черкесская Республика",
+            "sort": 25
+          },
+          {
+            "id": 1310543,
+            "value": "Кемеровская область/Кузбасс",
+            "sort": 26
+          },
+          {
+            "id": 1310545,
+            "value": "Кировская область",
+            "sort": 27
+          },
+          {
+            "id": 1310547,
+            "value": "Костромская область",
+            "sort": 28
+          },
+          {
+            "id": 1310549,
+            "value": "Краснодарский край",
+            "sort": 29
+          },
+          {
+            "id": 1310551,
+            "value": "Красноярский край",
+            "sort": 30
+          },
+          {
+            "id": 1310553,
+            "value": "Курганская область",
+            "sort": 31
+          },
+          {
+            "id": 1310555,
+            "value": "Курская область",
+            "sort": 32
+          },
+          {
+            "id": 1310557,
+            "value": "Ленинградская область",
+            "sort": 33
+          },
+          {
+            "id": 1310559,
+            "value": "Липецкая область",
+            "sort": 34
+          },
+          {
+            "id": 1310561,
+            "value": "Луганская Народная Республика",
+            "sort": 35
+          },
+          {
+            "id": 1310563,
+            "value": "Магаданская область",
+            "sort": 36
+          },
+          {
+            "id": 1310565,
+            "value": "Мурманская область",
+            "sort": 37
+          },
+          {
+            "id": 1310567,
+            "value": "Ненецкий АО",
+            "sort": 38
+          },
+          {
+            "id": 1310569,
+            "value": "Нижегородская область",
+            "sort": 39
+          },
+          {
+            "id": 1310571,
+            "value": "Новгородская область",
+            "sort": 40
+          },
+          {
+            "id": 1310573,
+            "value": "Новосибирская область",
+            "sort": 41
+          },
+          {
+            "id": 1310575,
+            "value": "Омская область",
+            "sort": 42
+          },
+          {
+            "id": 1310577,
+            "value": "Оренбургская область",
+            "sort": 43
+          },
+          {
+            "id": 1310579,
+            "value": "Орловская область",
+            "sort": 44
+          },
+          {
+            "id": 1310581,
+            "value": "Пензенская область",
+            "sort": 45
+          },
+          {
+            "id": 1310583,
+            "value": "Пермский край",
+            "sort": 46
+          },
+          {
+            "id": 1310585,
+            "value": "Приморский край",
+            "sort": 47
+          },
+          {
+            "id": 1310587,
+            "value": "Псковская область",
+            "sort": 48
+          },
+          {
+            "id": 1310589,
+            "value": "Республика Адыгея",
+            "sort": 49
+          },
+          {
+            "id": 1310591,
+            "value": "Республика Алтай",
+            "sort": 50
+          },
+          {
+            "id": 1310593,
+            "value": "Республика Башкортостан",
+            "sort": 51
+          },
+          {
+            "id": 1310595,
+            "value": "Республика Бурятия",
+            "sort": 52
+          },
+          {
+            "id": 1310597,
+            "value": "Республика Дагестан",
+            "sort": 53
+          },
+          {
+            "id": 1310599,
+            "value": "Республика Ингушетия",
+            "sort": 54
+          },
+          {
+            "id": 1310601,
+            "value": "Республика Калмыкия",
+            "sort": 55
+          },
+          {
+            "id": 1310603,
+            "value": "Республика Карелия",
+            "sort": 56
+          },
+          {
+            "id": 1310605,
+            "value": "Республика Коми",
+            "sort": 57
+          },
+          {
+            "id": 1310607,
+            "value": "Республика Марий Эл",
+            "sort": 58
+          },
+          {
+            "id": 1310609,
+            "value": "Республика Мордовия",
+            "sort": 59
+          },
+          {
+            "id": 1310611,
+            "value": "Республика Саха (Якутия)",
+            "sort": 60
+          },
+          {
+            "id": 1310613,
+            "value": "Республика Северная Осетия — Алания",
+            "sort": 61
+          },
+          {
+            "id": 1310615,
+            "value": "Республика Татарстан",
+            "sort": 62
+          },
+          {
+            "id": 1310617,
+            "value": "Республика Тыва",
+            "sort": 63
+          },
+          {
+            "id": 1310619,
+            "value": "Республика Хакасия",
+            "sort": 64
+          },
+          {
+            "id": 1310621,
+            "value": "Ростовская область",
+            "sort": 65
+          },
+          {
+            "id": 1310623,
+            "value": "Рязанская область",
+            "sort": 66
+          },
+          {
+            "id": 1310625,
+            "value": "Самарская область",
+            "sort": 67
+          },
+          {
+            "id": 1310627,
+            "value": "Саратовская область",
+            "sort": 68
+          },
+          {
+            "id": 1310629,
+            "value": "Сахалинская область",
+            "sort": 69
+          },
+          {
+            "id": 1310631,
+            "value": "Свердловская область",
+            "sort": 70
+          },
+          {
+            "id": 1310633,
+            "value": "Смоленская область",
+            "sort": 71
+          },
+          {
+            "id": 1310635,
+            "value": "Ставропольский край",
+            "sort": 72
+          },
+          {
+            "id": 1310637,
+            "value": "Тамбовская область",
+            "sort": 73
+          },
+          {
+            "id": 1310639,
+            "value": "Тверская область",
+            "sort": 74
+          },
+          {
+            "id": 1310641,
+            "value": "Томская область",
+            "sort": 75
+          },
+          {
+            "id": 1310643,
+            "value": "Тульская область",
+            "sort": 76
+          },
+          {
+            "id": 1310645,
+            "value": "Тюменская область",
+            "sort": 77
+          },
+          {
+            "id": 1310647,
+            "value": "Удмуртская Республика",
+            "sort": 78
+          },
+          {
+            "id": 1310649,
+            "value": "Ульяновская область",
+            "sort": 79
+          },
+          {
+            "id": 1310651,
+            "value": "Хабаровский край",
+            "sort": 80
+          },
+          {
+            "id": 1310653,
+            "value": "Ханты-Мансийский АО/Югра",
+            "sort": 81
+          },
+          {
+            "id": 1310655,
+            "value": "Херсонская область",
+            "sort": 82
+          },
+          {
+            "id": 1310657,
+            "value": "Челябинская область",
+            "sort": 83
+          },
+          {
+            "id": 1310659,
+            "value": "Чеченская Республика",
+            "sort": 84
+          },
+          {
+            "id": 1310661,
+            "value": "Чувашская Республика",
+            "sort": 85
+          },
+          {
+            "id": 1310663,
+            "value": "Чукотский АО",
+            "sort": 86
+          },
+          {
+            "id": 1310665,
+            "value": "Ямало-Ненецкий АО",
+            "sort": 87
+          },
+          {
+            "id": 1310667,
+            "value": "Ярославская область",
+            "sort": 88
+          }
+        ],
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/689567?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 689571,
+        "name": "Дата и время встречи",
+        "type": "date_time",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 600,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [
+          31303439
+        ],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/689571?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 689573,
+        "name": "Даты и время КВАЛ",
+        "type": "date_time",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 601,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [
+          30884775
+        ],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/689573?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 689575,
+        "name": "Дата и время НАШ",
+        "type": "date_time",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 602,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/689575?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 689597,
+        "name": "Дата и время распределения",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 603,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/689597?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 689601,
+        "name": "When start the project?",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 528,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/689601?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 689603,
+        "name": "Preferred interior style?",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 529,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/689603?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 689611,
+        "name": "Request",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 524,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/689611?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 689661,
+        "name": "All fields are filled in",
+        "type": "checkbox",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 527,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/689661?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 689883,
+        "name": "Назначение помещения",
+        "type": "text",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 553,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/689883?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 689885,
+        "name": "Право владения",
+        "type": "select",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 554,
+        "is_api_only": false,
+        "enums": [
+          {
+            "id": 1310861,
+            "value": "Аренда",
+            "sort": 500
+          },
+          {
+            "id": 1310863,
+            "value": "Собственность",
+            "sort": 1
+          }
+        ],
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/689885?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 689887,
+        "name": "Наличие ТЗ",
+        "type": "select",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 555,
+        "is_api_only": false,
+        "enums": [
+          {
+            "id": 1310865,
+            "value": "Да",
+            "sort": 500
+          },
+          {
+            "id": 1310867,
+            "value": "Нет",
+            "sort": 1
+          }
+        ],
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/689887?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 689905,
+        "name": "Время рассылки",
+        "type": "date_time",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 604,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/689905?page=1&limit=250"
+          }
+        }
+      },
+      {
+        "id": 689913,
+        "name": "clientID",
+        "type": "numeric",
+        "account_id": 14277685,
+        "code": null,
+        "sort": 605,
+        "is_api_only": false,
+        "enums": null,
+        "group_id": null,
+        "required_statuses": [],
+        "is_deletable": true,
+        "is_predefined": false,
+        "entity_type": "leads",
+        "tracking_callback": null,
+        "remind": null,
+        "triggers": [],
+        "currency": null,
+        "hidden_statuses": [],
+        "chained_lists": null,
+        "_links": {
+          "self": {
+            "href": "https://balcon.amocrm.ru/api/v4/leads/custom_fields/689913?page=1&limit=250"
           }
         }
       }

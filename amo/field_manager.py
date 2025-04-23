@@ -31,7 +31,7 @@ USERS_CACHE = f'{CACHE_DIR}/users.json'
 if not os.path.exists(CACHE_DIR):
     os.makedirs(CACHE_DIR)
 
-def get_lead_fields(use_cache=True):
+def get_lead_fields(use_cache=False):
     """
     Получение списка всех полей для лидов
     
@@ -72,7 +72,7 @@ def get_lead_fields(use_cache=True):
     
     return result
 
-def get_contact_fields(use_cache=True):
+def get_contact_fields(use_cache=False):
     """
     Получение списка всех полей для контактов
     
@@ -113,7 +113,7 @@ def get_contact_fields(use_cache=True):
     
     return result
 
-def get_company_fields(use_cache=True):
+def get_company_fields(use_cache=False):
     """
     Получение списка всех полей для компаний
     
@@ -154,7 +154,7 @@ def get_company_fields(use_cache=True):
     
     return result
 
-def get_pipelines(use_cache=True):
+def get_pipelines(use_cache=False):
     """
     Получение списка воронок и их статусов
     
@@ -195,7 +195,7 @@ def get_pipelines(use_cache=True):
     
     return result
 
-def get_users(use_cache=True):
+def get_users(use_cache=False):
     """
     Получение списка пользователей
     

@@ -9,7 +9,7 @@ import time
 import logging
 import requests
 from requests.exceptions import RequestException
-from dotenv import load_dotenv
+from . import auth
 
 # Настраиваем логирование
 logging.basicConfig(
@@ -32,14 +32,6 @@ if not logger.handlers:
 if not os.path.exists('logs'):
     os.makedirs('logs')
 
-# Загружаем переменные окружения
-load_dotenv()
-
-# Параметры из .env
-AMO_TOKEN = os.getenv('AMO_TOKEN')
-AMO_BASE_DOMAIN = os.getenv('AMO_BASE_DOMAIN')
-AMO_API_DOMAIN = os.getenv('AMO_API_DOMAIN')
-
 def get_headers():
     """
     Формирует заголовки для запросов к API
@@ -47,13 +39,28 @@ def get_headers():
     Returns:
         dict: Заголовки с токеном авторизации
     """
-    logger.debug(f"Получен токен для запроса (первые 20 символов): {AMO_TOKEN[:20]}...")
+    token = auth.get_amo_token()
+    logger.debug(f"Получен токен для запроса (первые 20 символов): {token[:20] if token else 'нет'}...")
     
     return {
-        'Authorization': f'Bearer {AMO_TOKEN}',
+        'Authorization': f'Bearer {token}',
         'Content-Type': 'application/json',
         'User-Agent': 'amoCRM-oAuth-client/1.0'
     }
+
+def get_url(path):
+    """
+    Формирует URL для запроса к API
+    
+    Args:
+        path (str): Путь API
+        
+    Returns:
+        str: Полный URL
+    """
+    base_domain = auth.get_amo_domain()
+    api_domain = auth.get_amo_api_domain()
+    return f'https://{api_domain}.{base_domain}/api/v4/{path}'
 
 def retry_request(func, max_retries=3, delay=1):
     """
@@ -201,20 +208,20 @@ def make_request(method, url, params=None, data=None, timeout=30):
 # Обертки для разных типов запросов
 def get(path, params=None):
     """GET запрос к API"""
-    url = f'https://{AMO_API_DOMAIN}.{AMO_BASE_DOMAIN}/api/v4/{path}'
+    url = get_url(path)
     return make_request('GET', url, params)
 
 def post(path, data, params=None):
     """POST запрос к API"""
-    url = f'https://{AMO_API_DOMAIN}.{AMO_BASE_DOMAIN}/api/v4/{path}'
+    url = get_url(path)
     return make_request('POST', url, params, data)
 
 def patch(path, data, params=None):
     """PATCH запрос к API"""
-    url = f'https://{AMO_API_DOMAIN}.{AMO_BASE_DOMAIN}/api/v4/{path}'
+    url = get_url(path)
     return make_request('PATCH', url, params, data)
 
 def delete(path, params=None):
     """DELETE запрос к API"""
-    url = f'https://{AMO_API_DOMAIN}.{AMO_BASE_DOMAIN}/api/v4/{path}'
+    url = get_url(path)
     return make_request('DELETE', url, params)
