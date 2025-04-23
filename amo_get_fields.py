@@ -103,93 +103,22 @@ def print_users():
         full_name = f"{user.get('name', '')} {user.get('last_name', '')}"
         print(f"{user['id']}: {full_name} ({user.get('email', '')})")
 
-def find_field(args):
-    """
-    Поиск поля по имени
-    
-    Args:
-        args (list): Аргументы командной строки в формате [entity_type, field_name]
-    """
-    if len(args) < 2:
-        print("Не указаны тип сущности и название поля")
-        print("Использование: python amo_get_fields.py field leads телефон")
-        return
-    
-    entity_type = args[0]
-    field_name = args[1]
-    
-    field_id = find_field_id(entity_type, field_name)
-    if field_id:
-        print(f"Найдено поле: {field_id} ({field_name})")
-    else:
-        print(f"Поле '{field_name}' не найдено")
-
-def find_status(args):
-    """
-    Поиск статуса по имени
-    
-    Args:
-        args (list): Аргументы командной строки в формате [pipeline_id, status_name]
-    """
-    if len(args) < 2:
-        print("Не указаны ID воронки и название статуса")
-        print("Использование: python amo_get_fields.py status 6375467 Новый")
-        return
-    
-    pipeline_id = args[0]
-    status_name = args[1]
-    
-    status_id = find_status_id(pipeline_id, status_name)
-    if status_id:
-        print(f"Найден статус: {status_id} ({status_name})")
-    else:
-        print(f"Статус '{status_name}' не найден в воронке {pipeline_id}")
-
-def find_user(args):
-    """
-    Поиск пользователя по имени
-    
-    Args:
-        args (list): Аргументы командной строки - имя пользователя
-    """
-    if len(args) < 1:
-        print("Не указано имя пользователя")
-        print("Использование: python amo_get_fields.py user Admin")
-        return
-    
-    user_name = args[0]
-    
-    user_id = find_user_id(user_name)
-    if user_id:
-        print(f"Найден пользователь: {user_id} ({user_name})")
-    else:
-        print(f"Пользователь '{user_name}' не найден")
-
 def main():
     """Основная функция скрипта"""
     if len(sys.argv) < 2:
         print("""
 Использование:
-  python amo_get_fields.py refresh       - Обновить все кэши
   python amo_get_fields.py leads         - Показать поля лидов
   python amo_get_fields.py contacts      - Показать поля контактов
   python amo_get_fields.py companies     - Показать поля компаний
   python amo_get_fields.py pipelines     - Показать воронки и статусы
   python amo_get_fields.py users         - Показать пользователей
-  python amo_get_fields.py field [entity_type] [field_name] - Найти ID поля по имени
-  python amo_get_fields.py status [pipeline_id] [status_name] - Найти ID статуса по имени
-  python amo_get_fields.py user [user_name] - Найти ID пользователя по имени
         """)
         return 0
     
     command = sys.argv[1]
-    
-    if command == 'refresh':
-        print("Обновление всех кэшей...")
-        refresh_all_caches()
-        print("Кэши обновлены")
-    
-    elif command == 'leads':
+           
+    if command == 'leads':
         print_fields('leads')
     
     elif command == 'contacts':
@@ -203,15 +132,6 @@ def main():
     
     elif command == 'users':
         print_users()
-    
-    elif command == 'field':
-        find_field(sys.argv[2:])
-    
-    elif command == 'status':
-        find_status(sys.argv[2:])
-    
-    elif command == 'user':
-        find_user(sys.argv[2:])
     
     else:
         print(f"Неизвестная команда: {command}")

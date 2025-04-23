@@ -17,7 +17,7 @@ if not logger.handlers:
     console_handler.setFormatter(formatter)
     logger.addHandler(console_handler)
 
-def get_lead_fields(use_cache=False):
+def get_lead_fields():
     """
     Получение списка всех полей для лидов
     
@@ -27,7 +27,7 @@ def get_lead_fields(use_cache=False):
     logger.debug("Запрос полей лидов")
     return api.get('leads/custom_fields')
 
-def get_contact_fields(use_cache=False):
+def get_contact_fields():
     """
     Получение списка всех полей для контактов
     
@@ -37,7 +37,7 @@ def get_contact_fields(use_cache=False):
     logger.debug("Запрос полей контактов")
     return api.get('contacts/custom_fields')
 
-def get_company_fields(use_cache=False):
+def get_company_fields():
     """
     Получение списка всех полей для компаний
     
@@ -47,7 +47,7 @@ def get_company_fields(use_cache=False):
     logger.debug("Запрос полей компаний")
     return api.get('companies/custom_fields')
 
-def get_pipelines(use_cache=False):
+def get_pipelines():
     """
     Получение списка воронок и их статусов
     
@@ -57,13 +57,15 @@ def get_pipelines(use_cache=False):
     logger.debug("Запрос воронок")
     return api.get('leads/pipelines')
 
-def get_users(use_cache=False):
+def get_users():
     """
     Получение списка всех пользователей
     
     Returns:
         dict: Словарь с информацией о пользователях
     """
+    logger.debug("Запрос пользователей")
+    return api.get('users')
 
 def search_users(query):
     """
