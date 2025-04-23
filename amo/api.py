@@ -40,7 +40,7 @@ def get_headers():
         dict: Заголовки с токеном авторизации
     """
     token = auth.get_amo_token()
-    logger.debug(f"Получен токен для запроса (первые 20 символов): {token[:20] if token else 'нет'}...")
+    logger.debug(f"Получен токен для запроса (первые 5 символов): {token[:5] if token else 'нет'}...")
     
     return {
         'Authorization': f'Bearer {token}',
