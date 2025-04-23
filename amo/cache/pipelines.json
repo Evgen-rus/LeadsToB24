@@ -2019,7 +2019,7 @@
           "statuses": [
             {
               "id": 56281698,
-              "name": "Неразобранное",
+              "name": "Incoming leads",
               "sort": 10,
               "is_editable": false,
               "pipeline_id": 6630374,
@@ -2172,7 +2172,7 @@
           "statuses": [
             {
               "id": 56341778,
-              "name": "Неразобранное",
+              "name": "Incoming leads",
               "sort": 10,
               "is_editable": false,
               "pipeline_id": 6639230,
@@ -2310,7 +2310,7 @@
           "statuses": [
             {
               "id": 66381362,
-              "name": "Неразобранное",
+              "name": "Incoming leads",
               "sort": 10,
               "is_editable": false,
               "pipeline_id": 8110638,
@@ -2751,7 +2751,7 @@
           "statuses": [
             {
               "id": 56828994,
-              "name": "Неразобранное",
+              "name": "Incoming leads",
               "sort": 10,
               "is_editable": false,
               "pipeline_id": 6711978,

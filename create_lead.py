@@ -12,11 +12,20 @@ logging.basicConfig(
 )
 logger = logging.getLogger('create_lead')
 
+# Добавляем вывод в консоль
+console_handler = logging.StreamHandler()
+console_handler.setLevel(logging.INFO)
+console_formatter = logging.Formatter('%(message)s')  # Упрощенный формат для консоли
+console_handler.setFormatter(console_formatter)
+logger.addHandler(console_handler)
+
 # Константы
-PHONE_FIELD_ID = 946599  # ID поля телефона для контакта
-PIPELINE_ID = 9501726
-STATUS_ID = 75980382  # Первичный контакт
-RESPONSIBLE_USER_ID = 12390714  # Evgenii
+PHONE_FIELD_ID = 318033  # ID поля телефона для контакта
+PIPELINE_ID = 2194891  # ID воронки "Частный Дизайн"
+STATUS_ID = 68384126  # ID этапа "DMP - LEADRECORD"
+RESPONSIBLE_USER_ID = 9480922  # ID ответственного "Михаил Васнецов"
+TAG_NAME = "LeadRecord"
+SOURCE_NAME = "LeadRecord"
 
 def create_contact_with_phone(phone, name=None):
     """
@@ -77,10 +86,12 @@ def create_lead_with_contact(name, contact_id):
         "name": name,
         "pipeline_id": PIPELINE_ID,
         "status_id": STATUS_ID,
-        "responsible_user_id": RESPONSIBLE_USER_ID
+        "responsible_user_id": RESPONSIBLE_USER_ID,
+        "tags": [TAG_NAME],
+        "source": SOURCE_NAME
     }
     
-    logger.info(f"Подготовлены данные для создания лида: {name}")
+    logger.info(f"Создание лида: {name}")
     
     # Создаем лид
     result = api.post('leads', [lead_data])
@@ -90,7 +101,17 @@ def create_lead_with_contact(name, contact_id):
         return None
         
     lead_id = result['_embedded']['leads'][0]['id']
-    logger.info(f"Создан лид с ID {lead_id}")
+    
+    # Выводим краткую информацию о созданном лиде
+    logger.info(f"✅ Создан лид: {name}")
+    logger.info(f"   ID лида: {lead_id}")
+    logger.info(f"   ID контакта: {contact_id}")
+    logger.info(f"   Воронка: Частный Дизайн")
+    logger.info(f"   Этап: DMP - LEADRECORD")
+    logger.info(f"   Ответственный: Михаил Васнецов")
+    logger.info(f"   Тег: {TAG_NAME}")
+    logger.info(f"   Источник: {SOURCE_NAME}")
+    logger.info("----------------------------------------")
     
     # Связываем лид с контактом
     link_data = [{
@@ -124,7 +145,7 @@ def create_lead_with_phone(phone):
         return None, None
         
     # Создаем лид и связываем с контактом
-    lead_name = f"Лид по телефону {phone}"
+    lead_name = f"LR_{phone}"  # Изменено название лида
     lead_id = create_lead_with_contact(lead_name, contact_id)
     
     if not lead_id:
