@@ -7,16 +7,12 @@ import sys
 import json
 import logging
 from dotenv import load_dotenv
-from amo.field_manager import (
-    refresh_all_caches, 
+from amo.field_manager import (    
     get_lead_fields,
     get_contact_fields, 
     get_company_fields,
     get_pipelines,
-    get_users,
-    find_field_id,
-    find_status_id,
-    find_user_id
+    get_users
 )
 
 # Настраиваем логирование
@@ -36,9 +32,37 @@ logger = logging.getLogger('amo_get_fields')
 # Загружаем переменные окружения
 load_dotenv()
 
-def print_json(data):
-    """Печать JSON в удобном формате"""
-    print(json.dumps(data, ensure_ascii=False, indent=2))
+def print_json(data, compact=False):
+    """
+    Печать JSON в удобном формате
+    
+    Args:
+        data (dict): Данные для печати
+        compact (bool): Компактный вывод (по умолчанию False)
+    """
+    # Фильтруем только нужные поля
+    if isinstance(data, dict):
+        filtered_data = {}
+        important_fields = ['id', 'name', 'type', 'value', 'values', 'status', 'pipeline']
+        
+        for key, value in data.items():
+            if key in important_fields or key == '_embedded':
+                if key == '_embedded':
+                    # Обрабатываем вложенные данные
+                    filtered_data[key] = {
+                        k: v for k, v in value.items() 
+                        if k in ['custom_fields', 'pipelines', 'users', 'statuses']
+                    }
+                else:
+                    filtered_data[key] = value
+        data = filtered_data
+
+    if compact:
+        # Компактный вывод без отступов
+        print(json.dumps(data, ensure_ascii=False))
+    else:
+        # Читаемый вывод с отступами
+        print(json.dumps(data, ensure_ascii=False, indent=2))
 
 def print_fields(entity_type):
     """
@@ -63,9 +87,11 @@ def print_fields(entity_type):
         print(f"Не удалось получить данные о полях для {entity_type}")
         return
     
-    # Выводим все поля в формате 'ID: Название'
+    # Выводим только ID и название поля
     for field in fields_data['_embedded']['custom_fields']:
-        print(f"{field['id']}: {field.get('name', '???')}")
+        name = field.get('name', '???')
+        field_type = field.get('type', '???')
+        print(f"{field['id']}: {name} ({field_type})")
 
 def print_pipelines():
     """Вывод всех воронок и их статусов"""

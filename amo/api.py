@@ -108,7 +108,7 @@ def make_request(method, url, params=None, data=None, timeout=30):
     
     # Логируем детали запроса
     logger.debug(f"API запрос: {method} {url}")
-    logger.debug(f"Заголовки: {headers}")
+    logger.debug(f"Заголовки: {mask_token(headers)}")
     logger.debug(f"Параметры: {params}")
     if data:
         # Ограничиваем вывод данных, чтобы не перегружать логи
@@ -136,7 +136,7 @@ def make_request(method, url, params=None, data=None, timeout=30):
         
         # Логируем ответ
         logger.debug(f"Статус ответа: {response.status_code}")
-        logger.debug(f"Заголовки ответа: {dict(response.headers)}")
+        logger.debug(f"Заголовки ответа: {filter_important_headers(dict(response.headers))}")
         
         # Обработка rate limiting
         if response.status_code == 429:
@@ -156,7 +156,7 @@ def make_request(method, url, params=None, data=None, timeout=30):
                 
                 # Парсим JSON
                 result = response.json()
-                logger.debug(f"Тело ответа: {result}")
+                logger.debug(f"Тело ответа: {truncate_response_body(result)}")
                 
                 # Проверяем, содержит ли ответ данные
                 if not result:
@@ -225,3 +225,50 @@ def delete(path, params=None):
     """DELETE запрос к API"""
     url = get_url(path)
     return make_request('DELETE', url, params)
+
+def mask_token(headers):
+    """
+    Маскирует токен в заголовках для безопасного логирования
+    """
+    if not headers:
+        return headers
+        
+    masked_headers = headers.copy()
+    if 'Authorization' in masked_headers:
+        auth = masked_headers['Authorization']
+        if auth.startswith('Bearer '):
+            token = auth[7:]  # убираем 'Bearer '
+            masked_headers['Authorization'] = f'Bearer {token[:8]}...'
+    return masked_headers
+
+def filter_important_headers(headers):
+    """
+    Фильтрует только важные заголовки для логирования
+    """
+    important_headers = [
+        'Content-Type',
+        'X-Request-Id',
+        'X-Runtime-Generated'
+    ]
+    return {k: v for k, v in headers.items() if k in important_headers}
+
+def truncate_response_body(body):
+    """
+    Сокращает тело ответа для логирования
+    """
+    if not isinstance(body, dict):
+        return body
+        
+    result = {}
+    if '_total_items' in body:
+        result['_total_items'] = body['_total_items']
+    if '_page' in body:
+        result['_page'] = body['_page']
+    if '_embedded' in body:
+        # Показываем только количество элементов
+        for key, value in body['_embedded'].items():
+            if isinstance(value, list):
+                result[f'{key}_count'] = len(value)
+            else:
+                result[key] = '...'
+    return result

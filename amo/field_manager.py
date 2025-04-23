@@ -5,15 +5,17 @@
 import logging
 from . import api
 
-# Настраиваем логирование на более подробный уровень
+# Настраиваем логирование
 logger = logging.getLogger('amo.field_manager')
 logger.setLevel(logging.DEBUG)
 
-# Добавляем вывод логов в консоль для отладки
+# Добавляем вывод логов в консоль
 if not logger.handlers:
     console_handler = logging.StreamHandler()
     console_handler.setLevel(logging.DEBUG)
-    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    # Упрощенный формат: [время] тип_лога: сообщение
+    formatter = logging.Formatter('[%(asctime)s] %(levelname)s: %(message)s', 
+                                datefmt='%H:%M:%S')
     console_handler.setFormatter(formatter)
     logger.addHandler(console_handler)
 
@@ -66,16 +68,3 @@ def get_users():
     """
     logger.debug("Запрос пользователей")
     return api.get('users')
-
-def search_users(query):
-    """
-    Поиск пользователей по запросу
-    
-    Args:
-        query (str): Запрос для поиска пользователей
-    
-    Returns:
-        dict: Словарь с информацией о найденных пользователях
-    """
-    logger.debug(f"Поиск пользователей по запросу: {query}")
-    return api.get('users/search', params={'query': query})
