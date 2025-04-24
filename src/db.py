@@ -241,6 +241,6 @@ def insert_lead(lead_data):
         return True
     
     except Exception as e:
-        logger.error(f"Ошибка при добавлении лида: {e}")
+        logger.debug(f"Ошибка при добавлении лида в БД: {e}")
         if 'conn' in locals() and conn:
             conn.close()

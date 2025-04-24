@@ -45,15 +45,33 @@ def setup_logging():
     Returns:
         logging.Logger: Настроенный логгер
     """
-    logging.basicConfig(
-        level=LOG_LEVEL,
-        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-        handlers=[
-            logging.FileHandler(LOG_FILE),
-            logging.StreamHandler()
-        ]
-    )
-    return logging.getLogger('leads_to_b24')
+    # Создаем логгер
+    logger = logging.getLogger('leads_to_b24')
+    logger.setLevel(LOG_LEVEL)
+    
+    # Форматтер для логов
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    
+    # Файловый handler - записывает все логи
+    file_handler = logging.FileHandler(LOG_FILE)
+    file_handler.setLevel(LOG_LEVEL)
+    file_handler.setFormatter(formatter)
+    logger.addHandler(file_handler)
+    
+    # Консольный handler - только важные сообщения
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(LOG_LEVEL)
+    console_handler.setFormatter(formatter)
+    
+    # Фильтр для консоли - пропускаем только сообщения о создании лидов
+    class LeadCreationFilter(logging.Filter):
+        def filter(self, record):
+            return "Был создан лид в Битрикс24" in record.getMessage()
+    
+    console_handler.addFilter(LeadCreationFilter())
+    logger.addHandler(console_handler)
+    
+    return logger
 
 # Создание логгера
 logger = setup_logging() 
