@@ -113,34 +113,48 @@ def send_to_bitrix24(lead_data, config=None):
             
             logger.info(f"Лид успешно создан в Битрикс24, ID: {lead_id}")
             
-            # Обновляем статус доставки в БД
-            conn = get_connection()
-            if conn:
-                cursor = conn.cursor()
-                cursor.execute('''
-                UPDATE leads
-                SET crm_delivery_status = ?, crm_delivery_time = CURRENT_TIMESTAMP
-                WHERE id = ?
-                ''', (f'delivered: Lead {lead_id}', lead_data.get('id')))
-                conn.commit()
-                conn.close()
+            # Проверяем, есть ли ID у лида перед обновлением БД
+            lead_db_id = lead_data.get('id')
+            if lead_db_id:
+                try:
+                    # Обновляем статус доставки в БД
+                    conn = get_connection()
+                    if conn:
+                        cursor = conn.cursor()
+                        cursor.execute('''
+                        UPDATE leads
+                        SET crm_delivery_status = ?, crm_delivery_time = CURRENT_TIMESTAMP
+                        WHERE id = ?
+                        ''', (f'delivered: Lead {lead_id}', lead_db_id))
+                        conn.commit()
+                        conn.close()
+                except Exception as e:
+                    # Логируем ошибку БД как DEBUG
+                    logger.debug(f"Не удалось обновить статус в БД: {e}")
             
             return True
         else:
             error_message = f"Ошибка при создании лида. Код ответа: {response.status_code}, ответ: {response.text}"
             logger.error(error_message)
             
-            # Обновляем статус доставки
-            conn = get_connection()
-            if conn:
-                cursor = conn.cursor()
-                cursor.execute('''
-                UPDATE leads
-                SET crm_delivery_status = ?, delivery_attempts = delivery_attempts + 1
-                WHERE id = ?
-                ''', (f'error: HTTP {response.status_code} - {response.text[:100]}', lead_data.get('id')))
-                conn.commit()
-                conn.close()
+            # Проверяем, есть ли ID у лида перед обновлением БД
+            lead_db_id = lead_data.get('id')
+            if lead_db_id:
+                try:
+                    # Обновляем статус доставки
+                    conn = get_connection()
+                    if conn:
+                        cursor = conn.cursor()
+                        cursor.execute('''
+                        UPDATE leads
+                        SET crm_delivery_status = ?, delivery_attempts = delivery_attempts + 1
+                        WHERE id = ?
+                        ''', (f'error: HTTP {response.status_code} - {response.text[:100]}', lead_db_id))
+                        conn.commit()
+                        conn.close()
+                except Exception as e:
+                    # Логируем ошибку БД как DEBUG
+                    logger.debug(f"Не удалось обновить статус в БД: {e}")
             
             return False
                 
@@ -148,16 +162,23 @@ def send_to_bitrix24(lead_data, config=None):
         error_message = f"Ошибка при отправке данных в Битрикс24: {e}"
         logger.error(error_message)
         
-        # Обновляем статус доставки
-        conn = get_connection()
-        if conn:
-            cursor = conn.cursor()
-            cursor.execute('''
-            UPDATE leads
-            SET crm_delivery_status = ?, delivery_attempts = delivery_attempts + 1
-            WHERE id = ?
-            ''', (f'error: {str(e)[:100]}', lead_data.get('id')))
-            conn.commit()
-            conn.close()
+        # Проверяем, есть ли ID у лида перед обновлением БД
+        lead_db_id = lead_data.get('id')
+        if lead_db_id:
+            try:
+                # Обновляем статус доставки
+                conn = get_connection()
+                if conn:
+                    cursor = conn.cursor()
+                    cursor.execute('''
+                    UPDATE leads
+                    SET crm_delivery_status = ?, delivery_attempts = delivery_attempts + 1
+                    WHERE id = ?
+                    ''', (f'error: {str(e)[:100]}', lead_db_id))
+                    conn.commit()
+                    conn.close()
+            except Exception as db_e:
+                # Логируем ошибку БД как DEBUG
+                logger.debug(f"Не удалось обновить статус в БД: {db_e}")
         
         return False 
